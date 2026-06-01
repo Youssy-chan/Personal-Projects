@@ -1,0 +1,4 @@
+MODULE CalibData
+    PERS tooldata EF_DemoTool:=[TRUE,[[0,0,155],[1,0,0,0]],[2,[20,0,15],[1,0,0,0],0,0,0]];
+    PERS wobjdata Workobject_3:=[FALSE,TRUE,"",[[485.512,347.241,308],[1,0,0,0]],[[0,0,0],[1,0,0,0]]];
+ENDMODULE

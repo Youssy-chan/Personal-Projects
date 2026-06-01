@@ -1,0 +1,15 @@
+# File pesanti SolidWorks
+*.sldasm
+*.sldprt
+*.slddrw
+~$*
+
+# File simulazione ABB
+*.T
+*.log
+*.bak
+backup/
+
+# File temporanei
+*.tmp
+Thumbs.db
