@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block title %}Importa Quiz{% endblock %}
+
+{% block content %}
+<style>
+    .import-quiz-container {
+        max-width: 600px;
+        margin: 2rem auto;
+        padding: 2rem;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .import-quiz-title {
+        color: #2196F3;
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+    .import-quiz-form p {
+        margin-bottom: 1rem;
+    }
+    .import-quiz-form label {
+        display: block;
+        margin-bottom: 0.5rem;
+        color: #333;
+    }
+    .import-quiz-form input[type="file"] {
+        width: 100%;
+        padding: 0.5rem;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+    .import-button {
+        display: inline-block;
+        padding: 0.8rem 1.5rem;
+        margin-top: 1rem;
+        border: none;
+        border-radius: 25px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        background: linear-gradient(45deg, #2196F3, #21CBF3);
+        color: white;
+    }
+    .import-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+</style>
+
+<div class="import-quiz-container">
+    <h1 class="import-quiz-title">Importa un Quiz</h1>
+    <form method="post" enctype="multipart/form-data" class="import-quiz-form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="import-button">Importa</button>
+    </form>
+</div>
+{% endblock %}

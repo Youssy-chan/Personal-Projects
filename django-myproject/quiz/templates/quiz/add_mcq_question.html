@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+    .mcq-form-container {
+        max-width: 800px;
+        margin: 2rem auto;
+        padding: 2rem;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    h1 {
+        color: #2196F3;
+        margin-bottom: 1.5rem;
+    }
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+    label {
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+        display: block;
+    }
+    input[type="text"], textarea {
+        width: 100%;
+        padding: 0.5rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 1rem;
+    }
+    .checkbox-group {
+        display: flex;
+        align-items: center;
+    }
+    .checkbox-group input[type="checkbox"] {
+        margin-right: 0.5rem;
+    }
+    button {
+        background-color: #2196F3;
+        color: white;
+        border: none;
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    button:hover {
+        background-color: #1976D2;
+    }
+    .errors {
+        color: #e74c3c;
+        margin-top: 1rem;
+        padding: 1rem;
+        background-color: #fde9e8;
+        border-radius: 5px;
+    }
+</style>
+
+<div class="mcq-form-container">
+    <h1>Aggiungi una Domanda a Scelta Multipla</h1>
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="{{ form.text.id_for_label }}">Domanda:</label>
+            {{ form.text }}
+        </div>
+        <div class="form-group">
+            <label>Risposte:</label>
+            {{ form.answer_1 }}
+            {{ form.answer_2 }}
+            {{ form.answer_3 }}
+            {{ form.answer_4 }}
+        </div>
+        <div class="form-group">
+            <label>Risposta corretta (obbligatoria):</label>
+            <div class="checkbox-group">
+                {{ form.correct_answer_1 }}
+                <label for="{{ form.correct_answer_1.id_for_label }}">-----> Risposta 1</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Risposta corretta (facoltativa):</label>
+            <div class="checkbox-group">
+                {{ form.correct_answer_2 }}
+                <label for="{{ form.correct_answer_2.id_for_label }}">-----> Risposta 2</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="{{ form.points.id_for_label }}">Punti:</label>
+            {{ form.points }}
+        </div>
+        <button type="submit">Salva Domanda</button>
+    </form>
+
+    {% if form.errors %}
+        <div class="errors">
+            <p>Si è verificato un errore:</p>
+            <ul>
+                {% for field, errors in form.errors.items %}
+                    <li>{{ field }}: {{ errors }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}

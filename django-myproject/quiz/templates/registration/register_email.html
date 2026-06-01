@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% block title %}{{ quiz.name }} - Registrati {% endblock %}
+{% block content %}
+<style>
+    .email-register-container {
+        max-width: 500px;
+        margin: 2rem auto;
+        padding: 2rem;
+        background-color: #e9ecef;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .email-title {
+        color: #28a745;
+        margin-bottom: 1.5rem;
+    }
+    .email-input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 1rem;
+        border: 1px solid #ced4da;
+        border-radius: 5px;
+    }
+    .verify-btn {
+        background-color: #28a745;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .verify-btn:hover {
+        background-color: #218838;
+    }
+</style>
+
+<div class="container email-register-container">
+    <h1 class="email-title">Registrati</h1>
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+    <form method="post">
+        {% csrf_token %}
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required class="email-input">
+        </div>
+        <button type="submit" class="verify-btn">Verifica Email</button>
+    </form>
+</div>
+{% endblock %}

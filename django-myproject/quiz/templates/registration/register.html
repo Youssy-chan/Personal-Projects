@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block title %}{{ quiz.name }} - Registrati {% endblock %}
+{% block content %}
+<style>
+    .register-container {
+        max-width: 500px;
+        margin: 2rem auto;
+        padding: 2rem;
+        background-color: #f8f9fa;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .register-title {
+        color: #007bff;
+        margin-bottom: 1.5rem;
+    }
+    .register-btn {
+        background-color: #007bff;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .register-btn:hover {
+        background-color: #0056b3;
+    }
+</style>
+
+<div class="container register-container">
+    <h1 class="register-title">Registrati</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="register-btn">Completa Registrazione</button>
+    </form>
+</div>
+{% endblock %}

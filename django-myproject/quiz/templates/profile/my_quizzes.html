@@ -1,0 +1,55 @@
+{% extends 'profile.html' %}
+{% block profile_content %}
+<style>
+    .quiz-list {
+        list-style-type: none;
+        padding: 0;
+    }
+    .quiz-item {
+        background-color: #f8f9fa;
+        border: 1px solid #dee2e6;
+        border-radius: 4px;
+        margin-bottom: 1rem;
+        padding: 1rem;
+    }
+    .quiz-name {
+        font-weight: bold;
+        color: #2196F3;
+    }
+    .quiz-actions {
+        margin-top: 0.5rem;
+    }
+    .quiz-action {
+        color: #2196F3;
+        text-decoration: none;
+        margin-right: 1rem;
+    }
+    .quiz-action:hover {
+        text-decoration: underline;
+    }
+    .no-quizzes {
+        color: #6c757d;
+        font-style: italic;
+    }
+</style>
+
+<h2 style="color: #2196F3; margin-bottom: 1rem;">I Miei Quiz</h2>
+
+<ul class="quiz-list">
+    {% for quiz in quizzes %}
+        <li class="quiz-item">
+            <span class="quiz-name">{{ quiz.name }}</span>
+            <div class="quiz-actions">
+                <a href="{% url 'edit_quiz' quiz.id %}" class="quiz-action">
+                    <i class="fas fa-edit"></i> Modifica
+                </a>
+                <a href="{% url 'delete_quiz' quiz.id %}" class="quiz-action">
+                    <i class="fas fa-trash-alt"></i> Elimina
+                </a>
+            </div>
+        </li>
+    {% empty %}
+        <li class="no-quizzes">Non hai ancora creato nessun quiz.</li>
+    {% endfor %}
+</ul>
+{% endblock %}

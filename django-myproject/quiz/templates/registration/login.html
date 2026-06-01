@@ -1,0 +1,131 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{{ quiz.name }} - Accedi {% endblock %}
+
+{% block content %}
+    <style>
+    .login-container {
+        max-width: 400px;
+        margin: 2rem auto;
+        padding: 2rem;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 1rem;
+    }
+    .form-group {
+        margin-bottom: 1rem;
+    }
+    input[type="text"], input[type="password"] {
+        width: 100%;
+        padding: 0.5rem;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+    .btn-primary {
+        width: 100%;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 0.7rem;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 1rem;
+    }
+    .btn-primary:hover {
+        background-color: #0056b3;
+    }
+    .social-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 1rem;
+    }
+    .social-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.7rem;
+        border-radius: 4px;
+        color: white;
+        font-weight: bold;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .social-button img {
+        width: 24px;
+        height: 24px;
+        margin-right: 10px;
+    }
+    .facebook {
+        background-color: #1877f2;
+    }
+    .facebook:hover {
+        background-color: #1877f2;
+    }
+    .google {
+        background-color: white;
+        color: #757575;
+        border: 1px solid #dadce0;
+    }
+    .google:hover {
+        background-color: black;
+        color: white;
+        border: 1px solid #dadce0;
+    }
+    .remember-me {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+    .remember-me input {
+        margin-right: 0.5rem;
+    }
+    .forgot-password {
+        text-align: left;
+        margin-bottom: 1rem;
+    }
+    .register-link {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+</style>
+<div class="login-container">
+    <h1>Accedi </h1>
+    <p class="register-link ">Sei nuovo? <a href="{% url 'register_email' %}"  style="color: #2196F3; text-decoration: none;">Registrati</a></p>
+
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <input type="text" name="username" placeholder="Email o Username" required>
+        </div>
+        <div class="form-group">
+            <input type="password" name="password" placeholder="Password" required>
+        </div>
+        <div class="remember-me">
+            <input type="checkbox" name="remember_me" id="remember_me">
+            <label for="remember_me">Ricordami</label>
+        </div>
+        <div class="forgot-password">
+            <a href="{% url 'password_reset' %}"  style="color: #2196F3; text-decoration: none;">Hai dimenticato la tua password?</a>
+        </div>
+
+        <button type="submit" class="btn btn-primary navbar-link" style="background: linear-gradient(45deg, #2196F3, #21CBF3); border: none; color: white; padding: 0.5rem 1rem; border-radius: 20px; transition: all 0.3s ease;">Accedi</button>
+    </form>
+
+    <div class="social-buttons">
+        <a href="{% url 'social:begin' 'facebook' %}" class="social-button facebook navbar-link">
+            <img src="{% static 'quiz/images/img.png' %}" alt="Facebook logo" />
+            Continua con Facebook
+        </a>
+        <a href="{% url 'social:begin' 'google-oauth2' %}" class="social-button google navbar-link" >
+            <img src="{% static 'quiz/images/img_3.png' %}" alt="Facebook logo" />
+            Continua con Google
+        </a>
+    </div>
+</div>
+{% endblock %}

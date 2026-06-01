@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+    .quiz-questions-container {
+        max-width: 800px;
+        margin: 2rem auto;
+        padding: 2rem;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    h1 {
+        color: #2196F3;
+        margin-bottom: 1.5rem;
+    }
+    .question-type-selector {
+        margin-bottom: 1.5rem;
+    }
+    .question-type-selector select {
+        width: 100%;
+        padding: 0.5rem;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    .question-list {
+        margin-top: 2rem;
+    }
+    .question-container {
+        background-color: #f5f5f5;
+        border-radius: 5px;
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+    .question-actions {
+        margin-top: 0.5rem;
+    }
+    .question-actions a {
+        margin-right: 0.5rem;
+        text-decoration: none;
+        color: #2196F3;
+    }
+    .question-actions a:hover {
+        text-decoration: underline;
+    }
+    .save-quiz-button {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .save-quiz-button:hover {
+        background-color: #45a049;
+    }
+</style>
+
+<div class="quiz-questions-container">
+    <h1>Aggiungi Domande al Tuo Quiz</h1>
+
+    <form method="post" class="question-type-selector">
+        {% csrf_token %}
+        <select name="question_type" onchange="this.form.submit()">
+            <option value="">Seleziona il tipo di domanda</option>
+            <option value="MCQ">Scelta multipla con una o più alternative corrette</option>
+            <option value="TF">Vero/Falso</option>
+            <option value="CLOZE">Completamento della frase</option>
+        </select>
+    </form>
+
+    <div class="question-list">
+        {% for question in questions %}
+            <div class="question-container">
+                <p>Domanda {{ forloop.counter }}: {{ question.text }}</p>
+                <div class="question-actions">
+                    {% if question.question_type == 'MCQ' %}
+                        <a href="{% url 'edit_mcq_question' question_id=question.id %}">Modifica</a>
+                    {% elif question.question_type == 'TF' %}
+                        <a href="{% url 'edit_tf_question' question_id=question.id %}">Modifica</a>
+                    {% elif question.question_type == 'CLOZE' %}
+                        <a href="{% url 'edit_cloze_question' question_id=question.id %}">Modifica</a>
+                    {% endif %}
+                    <a href="{% url 'delete_question' question_id=question.id %}">Elimina</a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    <form method="post" action="{% url 'save_quiz' quiz_id=quiz.id %}">
+        {% csrf_token %}
+        <button type="submit" class="save-quiz-button">Salva Quiz</button>
+    </form>
+</div>
+{% endblock %}

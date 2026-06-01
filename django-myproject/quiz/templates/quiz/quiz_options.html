@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block title %}Opzioni Quiz{% endblock %}
+
+{% block content %}
+<style>
+    .quiz-options-container {
+        max-width: 600px;
+        margin: 2rem auto;
+        padding: 2rem;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        text-align: center;
+    }
+    .quiz-options-title {
+        color: #2196F3;
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+    .quiz-option-button {
+        display: inline-block;
+        padding: 0.8rem 1.5rem;
+        margin: 0.5rem;
+        border: none;
+        border-radius: 25px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        text-decoration: none;
+        color: white;
+    }
+    .create-quiz-button {
+        background: linear-gradient(45deg, #2196F3, #21CBF3);
+    }
+    .import-quiz-button {
+        background-color: #6c757d;
+    }
+    .quiz-option-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+</style>
+
+<div class="quiz-options-container">
+    <h2 class="quiz-options-title">Seleziona un'opzione per il Quiz</h2>
+    <div>
+        <button onclick="window.location.href='{% url 'create_quiz' %}'" class="quiz-option-button create-quiz-button">Crea Quiz</button>
+        <button onclick="window.location.href='{% url 'import_quiz' %}'" class="quiz-option-button import-quiz-button">Importa Quiz</button>
+    </div>
+</div>
+{% endblock %}

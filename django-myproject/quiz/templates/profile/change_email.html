@@ -1,0 +1,59 @@
+{% extends "profile.html" %}
+{% block profile_content %}
+<style>
+    .form-container {
+        max-width: 400px;
+        margin: 2rem auto;
+        padding: 2rem;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .form-title {
+        color: #2196F3;
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+    .form-field {
+        margin-bottom: 1rem;
+    }
+    .form-field label {
+        display: block;
+        margin-bottom: 0.5rem;
+        color: #333;
+    }
+    .form-field input {
+        width: 100%;
+        padding: 0.5rem;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+    .submit-button {
+        display: block;
+        width: 100%;
+        padding: 0.8rem;
+        border: none;
+        border-radius: 25px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        background: linear-gradient(45deg, #2196F3, #21CBF3);
+        color: white;
+        text-align: center;
+    }
+    .submit-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+</style>
+
+<div class="form-container">
+    <h2 class="form-title">Cambia Email</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ email_form.as_p }}
+        <button type="submit" class="submit-button">Salva nuova email</button>
+    </form>
+</div>
+{% endblock %}

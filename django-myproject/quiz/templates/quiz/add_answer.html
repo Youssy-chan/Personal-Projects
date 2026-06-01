@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Add Answer to "{{ question.text }}"</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ answer_form.as_p }}
+    <button type="submit">Add Answer</button>
+</form>
+{% endblock %}

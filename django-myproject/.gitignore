@@ -1,0 +1,26 @@
+# Ambiente virtuale
+venv/
+env/
+.venv/
+
+# Database locale
+*.sqlite3
+db.sqlite3
+
+# File segreti Django — MAI su GitHub!
+*.env
+.env
+local_settings.py
+
+# Cache Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# PyCharm
+.idea/
+
+# File statici generati
+/staticfiles/
+/mediafiles/

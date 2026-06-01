@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+    .profile-container {
+        display: flex;
+        max-width: 1200px;
+        margin: 2rem auto;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        overflow: hidden;
+    }
+    .sidebar {
+        width: 250px;
+        background: linear-gradient(45deg, #2196F3, #21CBF3);
+        padding: 2rem 0;
+    }
+    .sidebar ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    .sidebar li {
+        margin-bottom: 0.5rem;
+    }
+    .sidebar a {
+        display: block;
+        color: white;
+        text-decoration: none;
+        padding: 0.75rem 1.5rem;
+        transition: background-color 0.3s ease;
+    }
+    .sidebar a:hover {
+        background-color: rgba(255,255,255,0.2);
+    }
+    .content {
+        flex-grow: 1;
+        padding: 2rem;
+    }
+    @media (max-width: 768px) {
+        .profile-container {
+            flex-direction: column;
+        }
+        .sidebar {
+            width: 100%;
+        }
+        .sidebar ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .sidebar li {
+            margin: 0.25rem;
+        }
+        .sidebar a {
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+        }
+    }
+</style>
+
+<div class="profile-container">
+    <div class="sidebar">
+        <ul>
+            <li><a href="{% url 'profile_settings' %}"><i class="fas fa-cog"></i> Impostazioni Profilo</a></li>
+            <li><a href="{% url 'profile_change_email' %}"><i class="fas fa-envelope"></i> Cambia Email</a></li>
+            <li><a href="{% url 'profile_change_password' %}"><i class="fas fa-lock"></i> Cambia Password</a></li>
+            <li><a href="{% url 'profile_delete_account' %}"><i class="fas fa-user-minus"></i> Elimina Account</a></li>
+            <li><a href="{% url 'my_quizzes' %}"><i class="fas fa-clipboard-list"></i> I Miei Quiz</a></li>
+            <li><a href="{% url 'quiz_history' %}"><i class="fas fa-history"></i> Cronologia</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        {% block profile_content %}
+        {% endblock %}
+    </div>
+</div>
+{% endblock %}

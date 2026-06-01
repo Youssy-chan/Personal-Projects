@@ -1,0 +1,126 @@
+{% extends 'base.html' %}
+{% load quiz_extras %}
+
+{% block title %}{{ quiz.name }} - Risultati Dettagliati{% endblock %}
+
+{% block content %}
+<style>
+    .results-container {
+        max-width: 800px;
+        margin: 2rem auto;
+        padding: 2rem;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .quiz-title {
+        color: #2196F3;
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+    .question-result {
+        margin-bottom: 1.5rem;
+        padding: 1rem;
+        border-radius: 5px;
+    }
+    .question-text {
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+    }
+    .answer-text {
+        margin-bottom: 0.5rem;
+    }
+    .correct-answer {
+        font-weight: bold;
+        color: #28a745;
+    }
+    .score {
+        font-style: italic;
+    }
+    .total-score {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-top: 1.5rem;
+        text-align: center;
+    }
+    .home-button {
+        display: block;
+        width: fit-content;
+        margin: 2rem auto 0;
+        padding: 0.8rem 1.5rem;
+        border: none;
+        border-radius: 25px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        background: linear-gradient(45deg, #2196F3, #21CBF3);
+        color: white;
+        text-decoration: none;
+        text-align: center;
+    }
+    .home-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+</style>
+
+<div class="results-container">
+    <h1 class="quiz-title">{{ quiz.name }}</h1>
+
+    {% for result in results %}
+        <div class="question-result" style="background-color:
+            {% if result.is_correct %}
+                #d4edda
+            {% elif result.is_blank %}
+                #f8f9fa
+            {% else %}
+                #f8d7da
+            {% endif %}
+        ;">
+            <p class="question-text">Domanda: {{ result.question.text }}</p>
+            <p class="answer-text">Tua risposta:
+                {% if result.question.question_type == 'MCQ' %}
+                    {% if result.selected_answers %}
+                        {% for ans in result.selected_answers %}
+                            {{ result.question|get_answer_by_id:ans }}
+                        {% endfor %}
+                    {% else %}
+                        Nessuna risposta data.
+                    {% endif %}
+                {% elif result.question.question_type == 'TF' %}
+                    {% if result.selected_answers %}
+                        {{ result.question|get_answer_by_id:result.selected_answers.0 }}
+                    {% else %}
+                        Nessuna risposta data.
+                    {% endif %}
+                {% elif result.question.question_type == 'CLOZE' %}
+                    {% if result.selected_answers and not result.selected_answers|join:"" == "" %}
+                        {{ result.selected_answers|join:" " }}
+                    {% else %}
+                        Nessuna risposta data.
+                    {% endif %}
+                {% endif %}
+            </p>
+            <p class="correct-answer">Risposta corretta:
+                {% if result.question.question_type == 'MCQ' %}
+                    {% for ans in result.question.answers.all %}
+                        {% if ans.is_correct %}
+                            {{ ans.text }},
+                        {% endif %}
+                    {% endfor %}
+                {% elif result.question.question_type == 'TF' %}
+                    {{ result.question|get_answer_text:True }}
+                {% elif result.question.question_type == 'CLOZE' %}
+                    {{ result.question|get_answer_text:True }}
+                {% endif %}
+            </p>
+            <p class="score">Punteggio assegnato: {{ result.assigned_score }}</p>
+        </div>
+    {% endfor %}
+
+    <p class="total-score">Punteggio totale: {{ total_score }} / {{ max_score }}</p>
+
+    <a href="{% url 'clear_quiz_session' %}" class="home-button">Torna alla Home</a>
+</div>
+{% endblock %}

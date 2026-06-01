@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% block title %}{{ quiz.name }} - Verifica email {% endblock %}
+{% block content %}
+<style>
+    .verify-container {
+        max-width: 500px;
+        margin: 2rem auto;
+        padding: 2rem;
+        background-color: #fff3cd;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .verify-title {
+        color: #ffc107;
+        margin-bottom: 1.5rem;
+    }
+    .timer {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin: 1rem 0;
+    }
+    .verify-btn, .resend-btn {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .verify-btn {
+        background-color: #ffc107;
+        color: black;
+    }
+    .verify-btn:hover {
+        background-color: #e0a800;
+    }
+    .resend-btn {
+        background-color: #6c757d;
+        color: white;
+        margin-top: 1rem;
+    }
+    .resend-btn:hover {
+        background-color: #5a6268;
+    }
+</style>
+
+<div class="container verify-container">
+    <h1 class="verify-title">Verifica Email</h1>
+    <p>Un codice di verifica è stato inviato a {{ email }}</p>
+    <div class="timer" id="timer">3:00</div>
+        <form method="post">
+            {% csrf_token %}
+
+            <input type="text" name="code" required placeholder="Inserisci il codice di verifica" class="form-control mb-3">
+            <button type="submit" class="verify-btn">Verifica</button>
+
+        </form>
+        <form method="post" action="{% url 'resend_code' %}">
+            {% csrf_token %}
+            <button type="submit" class="resend-btn">Rispedisci Codice</button>
+        </form>
+    </div>
+<script>
+    // Timer countdown
+    function startTimer(duration, display) {
+        var timer = duration, minutes, seconds;
+        setInterval(function () {
+            minutes = parseInt(timer / 60, 10);
+            seconds = parseInt(timer % 60, 10);
+
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+
+            display.textContent = minutes + ":" + seconds;
+
+            if (--timer < 0) {
+                timer = 0;
+            }
+        }, 1000);
+    }
+
+    window.onload = function () {
+        var threeMinutes = 60 * 3,
+            display = document.querySelector('#timer');
+        startTimer(threeMinutes, display);
+    };
+</script>
+{% endblock %}

@@ -1,0 +1,86 @@
+<!-- templates/quiz/home_quiz.html -->
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<style>
+    .home-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+    .welcome-section {
+        background: linear-gradient(45deg, #2196F3, #21CBF3);
+        color: white;
+        padding: 2rem;
+        border-radius: 10px;
+        margin-bottom: 2rem;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .welcome-section h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+    .welcome-message {
+        font-size: 1.2rem;
+    }
+    .quiz-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 2rem;
+    }
+    .quiz-card {
+        background-color: white;
+        border-radius: 10px;
+        padding: 1.5rem;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .quiz-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+    .quiz-card h2 {
+        color: #2196F3;
+        margin-bottom: 1rem;
+    }
+    .quiz-card a {
+        text-decoration: none;
+        color: inherit;
+    }
+    .quiz-card p {
+        color: #666;
+    }
+    .login-link {
+        color: #e5e5e5;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    .login-link:hover {
+        text-decoration: underline;
+    }
+</style>
+
+<div class="home-container">
+    <section class="welcome-section">
+        <h1>QUIZ DISPONIBILI!</h1>
+        {% if user.is_authenticated %}
+            <p class="welcome-message">Benvenuto, {{ user.username }}! Pronto per una nuova sfida?</p>
+        {% else %}
+            <p class="welcome-message">Esplora i nostri quiz e <a href="{% url 'login' %}" class="login-link">accedi</a> per accedere a tutte le funzionalità.</p>
+        {% endif %}
+    </section>
+
+    <div class="quiz-grid">
+        {% for quiz in quizzes %}
+            <div class="quiz-card">
+                <h2><a href="{% url 'quiz_detail' quiz.id %}">{{ quiz.name }}</a></h2>
+                <p>{{ quiz.description }}</p>
+            </div>
+        {% empty %}
+            <p>Al momento non ci sono quiz disponibili. Torna più tardi!</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
