@@ -1,15 +1,7 @@
-# File pesanti SolidWorks
-*.sldasm
-*.sldprt
-*.slddrw
-~$*
-
-# File simulazione ABB
-*.T
-*.log
-*.bak
-backup/
+# File immagine binari Robot Studio (pesanti, 63MB ciascuno)
+*.bin
 
 # File temporanei
+*.bak
 *.tmp
 Thumbs.db

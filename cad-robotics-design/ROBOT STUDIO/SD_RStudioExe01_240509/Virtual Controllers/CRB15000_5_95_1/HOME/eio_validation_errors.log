@@ -1,0 +1,12 @@
+2024-05-10 17:27 Internal python validation error.
+
+An internal error occurred while validating
+EioValidate version: 
+------------------------------------------------
+Traceback (most recent call last):
+  File "script\CfgValidationRules\eiovalidate.pyc", line 220, in main
+  File "script\CfgValidationRules\eio_validation_rules.pyc", line 95, in validate
+  File "script\CfgValidationRules\eio_validation_rules.pyc", line 138, in validate_cfg
+  File "script\CfgValidationRules\cfgdb_parser.pyc", line 103, in parse_cfg
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe0 in position 41: invalid continuation byte
+------------------------------------------------

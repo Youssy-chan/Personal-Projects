@@ -1,0 +1,485 @@
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/startup_with_axc.cmd
+01:33:32:901000 Status 0 from startup_log
+Begin system startup
+01:33:32:901000 Status 0 from echo
+01:33:32:901000 Status 0 from invoke2 s17_initialize
+01:33:37:751000 Status 0 from invoke AxcHal_InitModule
+01:33:37:751000 Status 0 from invoke AxcHal_StartModule
+01:33:41:751000 Status 0 from delay
+C:/Users/Youss/OneDrive/Desktop/Università/Design/bho/Virtual Controllers/CRB15000_5_95/TEMP has been mounted.
+01:33:44:305000 Status 0 from baseinit
+Goto to label: NO_ASCII_LOG
+01:33:44:305000 Status 0 from getkey ASCIILogMedia
+01:33:44:305000 Status 0 from uprobe_init
+01:33:44:305000 Status 0 from debug_service_base_init
+01:33:44:305000 Status 0 from invoke S33_01_create
+01:33:44:305000 Status 0 from S33_01_init
+01:33:45:505000 Status 0 from invoke AxcServoControl_InitModule
+Goto to label: VC_MCHEXCEPTION_SKIP
+01:33:45:505000 Status 0 from ifvc VC_MCHEXCEPTION_SKIP
+01:33:45:505000 Status 0 from invoke S98_01_create
+01:33:45:505000 Status 0 from S98_01_init
+01:36:39:457000 Status 0 from invoke scinit_load_and_start_safety_controller
+Goto to label: VC_SEP_SKIP
+01:36:39:457000 Status 0 from ifvc VC_SEP_SKIP
+Goto to label: VC_CS_SKIP
+01:36:39:457000 Status 0 from ifvc VC_CS_SKIP
+Goto to label: VC_SKIP_FIRMWARE_UPGRADE
+01:36:39:457000 Status 0 from ifvc VC_SKIP_FIRMWARE_UPGRADE
+01:36:39:457000 Status 0 from bb_populate
+01:36:39:457000 Status 0 from bb_populate
+01:36:39:457000 Status 0 from bb_populate
+01:36:39:457000 Status 0 from bb_populate
+01:36:39:457000 Status 0 from bb_populate
+01:36:39:457000 Status 0 from bb_populate
+01:36:39:457000 Status 0 from bb_populate
+01:36:39:457000 Status 0 from bb_populate
+01:36:39:457000 Status 0 from bb_populate
+01:36:39:457000 Status 0 from bb_populate
+01:36:39:457000 Status 0 from bb_populate
+01:36:39:457000 Status 0 from bb_populate
+01:36:57:469000 Status 0 from sysdmp_init
+01:36:59:431000 Status 0 from task 
+01:36:59:431000 Status 0 from debug_service_init
+01:36:59:431000 Status 0 from sysdmp_add
+01:36:59:431000 Status 0 from sysdmp_add
+01:36:59:431000 Status 0 from sysdmp_add
+01:36:59:431000 Status 0 from sysdmp_add
+01:36:59:431000 Status 0 from sysdmp_add
+01:36:59:431000 Status 0 from sysdmp_add
+01:36:59:431000 Status 0 from sysdmp_add
+Goto to label: NO_WVLOG
+01:36:59:431000 Status 0 from ifvc NO_WVLOG
+Goto to label: NO_ETHCAP
+01:36:59:431000 Status 0 from ifvc NO_ETHCAP
+01:37:02:210000 Status 0 from task 
+01:37:02:216000 Status 0 from synchronize task
+01:37:02:216000 Status 0 from go task
+01:37:03:806000 Status 0 from task 
+01:37:06:796000 Status 0 from task 
+01:37:09:873000 Status 0 from task 
+Goto to label: VC_NO_CLOCK_PROBE
+01:37:09:873000 Status 0 from ifvc VC_NO_CLOCK_PROBE
+
+24-08-20  22:25:34 MC0: type = STATE_CHANGE id = Operational code = 45 (10045)
+
+01:37:09:873000 Status 0 from basenew
+Base services started
+01:37:09:873000 Status 0 from echo
+Goto to label: VC_NO_REMOTE_DIAGNOSTIC
+01:37:09:873000 Status 0 from ifvc VC_NO_REMOTE_DIAGNOSTIC
+01:37:09:873000 Status 0 from S98_01_new
+01:37:09:873000 Status 0 from direxist C:/Users/Youss/OneDrive/Desktop/Università/Design/bho/Virtual Controllers/CRB15000_5_95/TEMP/rw_trash
+Goto to label: NEXT_STEP
+01:37:09:873000 Status 0 from goto NEXT_STEP
+Initializing system interrupts
+01:37:09:873000 Status 0 from print
+01:37:11:353000 Status 0 from invoke AxcServoControl_StartModule
+01:37:14:353000 Status 0 from delay
+Goto to label: VC_NO_MC_SEP_UPGRADE
+01:37:14:353000 Status 0 from ifvc VC_NO_MC_SEP_UPGRADE
+Goto to label: VC_NO_MC_CS_UPGRADE
+01:37:14:353000 Status 0 from ifvc VC_NO_MC_CS_UPGRADE
+Goto to label: VC_NO_MC_FPGA_UPGRADE
+01:37:14:353000 Status 0 from ifvc VC_NO_MC_FPGA_UPGRADE
+01:37:14:353000 Status 0 from invoke fciInit
+01:37:14:353000 Status 0 from init eio
+01:37:14:353000 Status 0 from invoke internalBusDrv
+01:37:15:13000 Status 0 from task 
+01:37:16:172000 Status 0 from task 
+01:37:16:172000 Status 0 from invoke incInstallDriver
+Goto to label: LOAD_CMD
+01:37:16:172000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/enms/en_base.cmd
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/enms/en_base.cmd
+01:37:16:172000 Status 0 from sysdmp_add
+01:37:17:489000 Status 0 from task 
+01:37:18:469000 Status 0 from task 
+01:37:19:521000 Status 0 from task 
+01:37:19:521000 Status 0 from invoke incInstallDriver
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/enms/en_base.cmd
+01:37:19:521000 Status 0 from include 
+Goto to label: NO_BONJOUR_DAEMON
+01:37:19:521000 Status 0 from ifvc NO_BONJOUR_DAEMON
+01:37:19:521000 Status 0 from invoke2 init_mempools
+01:37:20:873000 Status 0 from task 
+01:37:21:558000 Status 0 from task 
+01:37:22:704000 Status 0 from task 
+01:37:23:903000 Status 0 from task 
+01:37:24:619000 Status 0 from task 
+Starting features - phase 1 of 5
+01:37:24:619000 Status 0 from echo
+Goto to label: LOAD_CMD
+01:37:24:619000 Status 0 from fileexist C:/Users/Youss/OneDrive/Desktop/Università/Design/bho/Virtual Controllers/CRB15000_5_95/internal/opt_l0.cmd
+
+Script begin: C:/Users/Youss/OneDrive/Desktop/Università/Design/bho/Virtual Controllers/CRB15000_5_95/internal/opt_l0.cmd
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/ScInc_opt.cmd
+Starting ScIncTasks and installs the driver/networks
+01:37:24:619000 Status 0 from echo
+01:37:25:693000 Status 0 from task 
+01:37:26:792000 Status 0 from task 
+01:37:26:792000 Status 0 from invoke incInstallDriver
+End of ScIncTasks installation
+01:37:26:792000 Status 0 from echo
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/ScInc_opt.cmd
+01:37:26:792000 Status 0 from include End of ScIncTasks installation
+Script end: C:/Users/Youss/OneDrive/Desktop/Università/Design/bho/Virtual Controllers/CRB15000_5_95/internal/opt_l0.cmd
+01:37:26:792000 Status 0 from include End of ScIncTasks installation
+01:37:26:792000 Status 0 from init sio
+01:37:26:792000 Status 0 from init motion
+01:37:26:792000 Status 0 from init rol
+01:37:26:792000 Status 0 from init cab
+01:37:26:792000 Status 0 from init bar
+01:37:26:792000 Status 0 from init pgmrun
+01:37:26:792000 Status 0 from init rapid
+01:37:26:792000 Status 0 from init puscfg
+01:37:26:792000 Status 0 from invoke sdlog_init
+01:37:27:885000 Status 0 from task 
+Goto to label: VC_CABSUPTS_SKIP
+01:37:27:885000 Status 0 from ifvc VC_CABSUPTS_SKIP
+01:37:27:885000 Status 0 from invoke2 sevt_safety_init
+01:37:27:885000 Status 0 from invoke2 scsafIntBusInit
+01:37:27:885000 Status 0 from invoke2 epanel_device_init
+01:37:27:885000 Status 0 from invoke2 axc_brd_create_IntBusDrvSys
+01:37:29:357000 Status 0 from task 
+01:37:30:585000 Status 0 from task 
+01:37:31:779000 Status 0 from task 
+01:37:32:913000 Status 0 from task 
+01:37:34:85000 Status 0 from task 
+01:37:34:576000 Status 0 from reconfigure eio
+01:37:34:576000 Status 0 from reconfigure sio
+01:37:35:649000 Status 0 from task 
+01:37:36:681000 Status 0 from task 
+01:37:37:649000 Status 0 from task 
+01:37:38:653000 Status 0 from task 
+01:37:39:89000 Status 0 from task 
+01:37:40:345000 Status 0 from task 
+01:37:41:762000 Status 0 from task 
+01:37:43:115000 Status 0 from task 
+01:37:44:518000 Status 0 from task 
+01:37:45:889000 Status 0 from task 
+01:37:46:825000 Status 0 from task 
+01:37:47:693000 Status 0 from task 
+01:37:48:653000 Status 0 from task 
+01:37:49:533000 Status 0 from task 
+01:37:50:120000 Status 0 from task 
+01:37:51:337000 Status 0 from task 
+01:37:52:731000 Status 0 from task 
+01:37:54:69000 Status 0 from task 
+01:37:55:253000 Status 0 from task 
+01:37:56:576000 Status 0 from task 
+01:37:57:489000 Status 0 from task 
+01:37:58:261000 Status 0 from task 
+01:37:59:46000 Status 0 from task 
+01:37:59:920000 Status 0 from task 
+01:38:00:825000 Status 0 from task 
+01:38:01:666000 Status 0 from task 
+01:38:02:545000 Status 0 from task 
+Goto to label: VC_AXC_SKIP
+01:38:02:545000 Status 0 from ifvc VC_AXC_SKIP
+01:38:03:325000 Status 0 from task 
+01:38:04:469000 Status 0 from task 
+01:38:04:576000 Status 0 from task 
+01:38:05:381000 Status 0 from task 
+01:38:05:854000 Status 0 from task 
+01:38:06:429000 Status 0 from task 
+01:38:07:115000 Status 0 from task 
+01:38:07:797000 Status 0 from task 
+01:38:08:533000 Status 0 from task 
+01:38:09:29000 Status 0 from task 
+01:38:09:621000 Status 0 from task 
+01:38:10:280000 Status 0 from task 
+01:38:10:861000 Status 0 from task 
+01:38:11:473000 Status 0 from task 
+01:38:12:21000 Status 0 from task 
+01:38:12:657000 Status 0 from task 
+01:38:13:217000 Status 0 from task 
+01:38:13:857000 Status 0 from task 
+01:38:14:571000 Status 0 from task 
+01:38:15:172000 Status 0 from task 
+01:38:15:896000 Status 0 from task 
+01:38:16:543000 Status 0 from task 
+01:38:17:313000 Status 0 from task 
+01:38:17:978000 Status 0 from task 
+01:38:18:713000 Status 0 from task 
+01:38:19:429000 Status 0 from task 
+01:38:20:167000 Status 0 from task 
+Waiting for task group 1 to start
+01:38:20:167000 Status 0 from print
+01:38:20:173000 Status 0 from synchronize task
+01:38:20:673000 Status 0 from delay
+Message (cmd/msgType: 299/3) received from sid: 0
+01:38:20:673000 Status 0 from go task
+Goto to label: VC_AXC_SKIP
+01:38:20:673000 Status 0 from ifvc VC_AXC_SKIP
+Starting features - phase 2 of 5
+01:38:20:673000 Status 0 from echo
+Goto to label: LOAD_CMD
+01:38:20:673000 Status 0 from fileexist C:/Users/Youss/OneDrive/Desktop/Università/Design/bho/Virtual Controllers/CRB15000_5_95/internal/option.cmd
+
+Script begin: C:/Users/Youss/OneDrive/Desktop/Università/Design/bho/Virtual Controllers/CRB15000_5_95/internal/option.cmd
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/scopt.cmd
+01:38:20:673000 Status 0 from sysdmp_add
+01:38:20:673000 Status 0 from sysdmp_add
+01:38:20:673000 Status 0 from sysdmp_add
+01:38:20:673000 Status 0 from sysdmp_add
+Starting Safety Controller orchestrator
+01:38:20:673000 Status 0 from echo
+Message (cmd/msgType: 299/3) received from sid: 0
+Rapi-Subscription running on slot: 205
+01:38:20:673000 Status 0 from task 
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/scopt.cmd
+01:38:20:673000 Status 0 from include 
+Script end: C:/Users/Youss/OneDrive/Desktop/Università/Design/bho/Virtual Controllers/CRB15000_5_95/internal/option.cmd
+01:38:20:673000 Status 0 from include 
+Starting motion system
+01:38:20:673000 Status 0 from echo
+Simulated moc_io.
+adding fc_master1 as fc_master_name
+  Cpu1 in state ready
+
+24-08-20  22:25:37 SC CPUA: type = STATE_CHANGE id = Safety code = 665 (90665)
+
+STATMATS. New motion_planner: motion_planner_1
+STATMATS. New motion_planner: motion_planner_2
+STATMATS. New motion_planner: motion_planner_3
+STATMATS. New motion_planner: motion_planner_4
+STATMATS. New motion_planner: motion_planner_5
+STATMATS. New motion_planner: motion_planner_6
+STATMATS. New motion_planner: motion_planner_7
+SISMA_BS_INFO 41152
+01:38:21:696000 Status 0 from new motion
+01:38:23:196000 Status 0 from delay
+01:38:23:196000 Status 0 from connect_dependings SYS_STORED_OBJ_CAB
+01:38:23:196000 Status 0 from if SYNCROB
+Goto to label: NOSYNC
+01:38:23:196000 Status 0 from goto NOSYNC
+Waiting for motion system to start
+01:38:23:196000 Status 0 from echo
+01:38:23:202000 Status 0 from synchronize task
+Message (cmd/msgType: 299/3) received from sid: 0
+Message (cmd/msgType: 299/3) received from sid: 0
+Message (cmd/msgType: 299/3) received from sid: 0
+Message (cmd/msgType: 299/3) received from sid: 0
+Message (cmd/msgType: 299/3) received from sid: 0
+01:38:23:202000 Status 0 from go task
+Synchronizing industrial networks
+01:38:23:202000 Status 0 from echo
+Message (cmd/msgType: 299/3) received from sid: 0
+01:38:23:202000 Status 0 from io_synchronize
+Goto to label: VIRTIOTS_RUN
+01:38:23:202000 Status 0 from ifvc VIRTIOTS_RUN
+01:38:23:268000 Status 0 from task 
+Starting RAPID system
+01:38:23:268000 Status 0 from echo
+01:38:23:268000 Status 0 from invoke rldryrun_start
+01:38:23:268000 Status 0 from invoke rlcyclic_start
+01:38:23:268000 Status 13 from invoke rlvisualize_start
+01:38:23:268000 Status 0 from invoke rldata_init
+------------number_of_tasks 2 
+------------number_of_tasks 2 
+
+24-08-20  22:25:38 MC0: type = STATE_CHANGE id = Operational code = 2 (10002)
+arg 0: 1 arg 1: 0 
+arg 2: SC_CBC
+
+
+24-08-20  22:25:38 MC0: type = STATE_CHANGE id = Operational code = 2 (10002)
+arg 0: 2 arg 1: 0 
+arg 2: T_ROB1
+
+
+24-08-20  22:25:39 MC0: type = STATE_CHANGE id = Operational code = 40 (10040)
+arg 0: 0 arg 1: 0 
+arg 2: T_ROB1
+arg 3: 51501884 arg 4: 588834428 
+01:38:23:789000 Status 0 from new rapid
+Starting features - phase 3 of 5
+01:38:23:789000 Status 0 from echo
+01:38:23:789000 Status 0 from fileexist C:/Users/Youss/OneDrive/Desktop/Università/Design/bho/Virtual Controllers/CRB15000_5_95/internal/opt_l1.cmd
+Goto to label: NEXT_STEP
+01:38:23:789000 Status 0 from goto NEXT_STEP
+
+24-08-20  22:25:41 MC0: type = STATE_CHANGE id = Operational code = 12 (10012)
+
+
+24-08-20  22:25:41 MC0: type = STATE_CHANGE id = Operational code = 15 (10015)
+
+01:38:29:45000 Status 0 from new cab
+Starting communication services
+01:38:29:45000 Status 0 from echo
+01:38:29:45000 Status 0 from invoke2 set_max_allowed_robapi_wan_connections
+
+24-08-20  22:25:41 MC0: type = STATE_CHANGE id = Operational code = 150 (10150)
+arg 0: 1 
+arg 1: SC_CBC
+
+
+24-08-20  22:25:41 MC0: type = STATE_CHANGE id = Operational code = 150 (10150)
+arg 0: 2 
+arg 1: T_ROB1
+
+
+24-08-20  22:25:41 MC0: type = STATE_CHANGE id = Operational code = 129 (10129)
+arg 0: 1 
+arg 1: SC_CBC
+
+
+24-08-20  22:25:41 MC0: type = STATE_CHANGE id = Operational code = 2 (10002)
+arg 0: 2 arg 1: 0 
+arg 2: T_ROB1
+
+
+24-08-20  22:25:41 MC0: type = STATE_CHANGE id = Operational code = 150 (10150)
+arg 0: 1 
+arg 1: SC_CBC
+
+01:38:29:81000 Status 0 from task 
+
+24-08-20  22:25:41 MC0: type = STATE_CHANGE id = Operational code = 129 (10129)
+arg 0: 2 
+arg 1: T_ROB1
+
+01:38:29:147000 Status 0 from task 
+01:38:29:221000 Status 0 from task 
+01:38:29:309000 Status 0 from task 
+robcmdts ipc connected 
+01:38:29:356000 Status 0 from task 
+robayats started 
+01:38:29:433000 Status 0 from task 
+01:38:29:505000 Status 0 from task 
+01:38:29:585000 Status 0 from task 
+01:38:29:661000 Status 0 from task 
+01:38:29:751000 Status 0 from task 
+01:38:29:837000 Status 0 from task 
+01:38:29:953000 Status 0 from task 
+01:38:29:953000 Status 0 from invoke2 init_opcua_mempools
+01:38:30:21000 Status 0 from task 
+Starting features - phase 4 of 5
+01:38:30:21000 Status 0 from echo
+01:38:30:21000 Status 0 from fileexist C:/Users/Youss/OneDrive/Desktop/Università/Design/bho/Virtual Controllers/CRB15000_5_95/internal/opt_l2.cmd
+Goto to label: NEXT_STEP
+01:38:30:21000 Status 0 from goto NEXT_STEP
+01:38:30:101000 Status 0 from task 
+Goto to label: NETSCANSKIP
+01:38:30:101000 Status 0 from ifvc NETSCANSKIP
+Finalizing RAPID system
+01:38:30:101000 Status 0 from echo
+01:38:30:107000 Status 0 from synchronize task
+01:38:30:107000 Status 0 from rapid_startup_ready
+01:38:30:107000 Status 0 from cab_startup_ready
+Message (cmd/msgType: 299/3) received from sid: 0
+Message (cmd/msgType: 299/3) received from sid: 0
+Message (cmd/msgType: 299/3) received from sid: 0
+Message (cmd/msgType: 299/3) received from sid: 0
+01:38:30:107000 Status 0 from go task
+Goto to label: VTSPEED
+01:38:30:107000 Status 0 from ifvc VTSPEED
+01:38:30:107000 Status 0 from invoke VTSetSpeed
+Starting features - phase 1 of 5
+01:38:30:107000 Status 0 from echo
+01:38:30:107000 Status 0 from fileexist C:/Users/Youss/OneDrive/Desktop/Università/Design/bho/Virtual Controllers/CRB15000_5_95/internal/opt_l3.cmd
+Goto to label: NEXT_STEP
+01:38:30:107000 Status 0 from goto NEXT_STEP
+01:38:30:107000 Status 0 from upgrade_warm_start_completed
+01:38:30:107000 Status 0 from unofficial_rw_notification
+01:38:30:107000 Status 0 from sysdmp_add
+01:38:30:107000 Status 0 from sysdmp_add
+01:38:30:107000 Status 0 from sysdmp_add
+01:38:30:107000 Status 0 from sysdmp_add
+01:38:30:107000 Status 0 from sysdmp_add
+01:38:30:107000 Status 0 from sysdmp_add
+01:38:30:107000 Status 0 from sysdmp_add
+01:38:30:107000 Status 0 from sysdmp_add
+01:38:30:107000 Status 0 from sysdmp_add
+01:38:30:107000 Status 0 from sysdmp_add
+01:38:30:107000 Status 0 from sysdmp_add
+01:38:30:107000 Status 0 from sysdmp_add
+01:38:30:107000 Status 0 from sysdmp_add
+01:38:30:107000 Status 0 from sysdmp_add
+01:38:30:107000 Status 0 from sysdmp_add
+01:38:30:107000 Status 0 from sysdmp_add
+01:38:30:107000 Status 0 from sysdmp_add
+01:38:30:107000 Status 0 from sysdmp_add
+01:38:30:107000 Status 0 from sysdmp_add
+01:38:30:107000 Status 0 from sysdmp_add
+01:38:30:107000 Status 0 from sysdmp_add
+01:38:30:107000 Status 0 from sysdmp_add
+01:38:30:107000 Status 0 from sysdmp_add
+01:38:30:107000 Status 0 from sysdmp_add
+01:38:30:107000 Status 0 from sysdmp_add
+01:38:30:107000 Status 0 from sysdmp_add
+01:38:30:107000 Status 0 from sysdmp_add
+01:38:30:107000 Status 0 from sysdmp_add
+01:38:30:107000 Status 0 from sysdmp_add
+01:38:30:107000 Status 0 from sysdmp_add
+01:38:30:107000 Status 0 from sysdmp_add
+01:38:30:107000 Status -1 from sysdmp_add
+ ... will continue!
+01:38:30:107000 Status 0 from sysdmp_add
+01:38:30:107000 Status 0 from sysdmp_add
+Goto to label: NEXT_STEP
+01:38:30:107000 Status 0 from goto NEXT_STEP
+01:38:30:107000 Status 0 from sysdmp_add
+01:38:30:107000 Status 0 from sysdmp_trigger_add
+01:38:30:107000 Status 0 from sysdmp_trigger_add
+01:38:30:107000 Status 0 from sysdmp_trigger_add
+01:38:30:107000 Status 0 from sysdmp_trigger_add
+01:38:30:107000 Status 0 from sysdmp_trigger_add
+01:38:30:107000 Status 0 from sysdmp_trigger_add
+01:38:30:107000 Status 0 from sysdmp_trigger_add
+01:38:30:107000 Status 0 from sysdmp_trigger_add
+01:38:30:107000 Status 0 from sysdmp_trigger_add
+01:38:30:107000 Status 0 from sysdmp_trigger_add
+01:38:30:107000 Status 0 from sysdmp_trigger_add
+01:38:30:107000 Status 0 from sysdmp_trigger_add
+01:38:30:107000 Status 0 from sysdmp_trigger_add
+01:38:30:107000 Status 0 from sysdmp_trigger_add
+01:38:30:107000 Status 0 from sysdmp_add_logfile
+01:38:30:107000 Status 0 from sysdmp_add_logfile
+01:38:30:107000 Status 0 from sysdmp_add_logfile
+01:38:30:107000 Status 0 from sysdmp_add_logfile
+01:38:30:107000 Status 0 from sysdmp_add_logfile
+01:38:30:107000 Status 0 from sysdmp_add_logfile
+01:38:30:107000 Status 0 from sysdmp_add_logfile
+01:38:30:107000 Status 0 from sysdmp_add_logfile
+01:38:30:107000 Status 0 from sysdmp_add_logfile
+01:38:30:107000 Status 0 from sysdmp_add_logfile
+01:38:30:107000 Status 0 from sysdmp_add_logfile
+01:38:30:107000 Status 0 from sysdmp_add_logfile
+01:38:30:107000 Status 0 from sysdmp_add_logfile
+01:38:30:107000 Status 0 from sysdmp_add_logfile
+01:38:30:107000 Status 0 from sysdmp_add_logfile
+01:38:30:107000 Status 0 from sysdmp_add_logfile
+01:38:30:107000 Status 0 from sysdmp_add_logfile
+01:38:30:107000 Status 0 from sysdmp_add_logfile
+01:38:30:107000 Status 0 from sysdmp_add_logfile
+01:38:30:107000 Status 0 from sysdmp_add_logfile
+01:38:30:107000 Status 0 from sysdmp_add_logfile
+01:38:30:107000 Status 0 from sysdmp_add_logfile
+01:38:30:107000 Status 0 from sysdmp_add_logfile
+01:38:30:107000 Status 0 from sysdmp_add_logfile
+01:38:30:107000 Status 0 from sysdmp_add_logfile
+01:38:30:107000 Status 0 from sysdmp_add_logfile
+01:38:30:107000 Status 0 from sysdmp_add_logfile
+01:38:30:107000 Status 0 from sysdmp_add
+01:38:30:107000 Status 0 from sysdmp_add
+01:38:30:107000 Status 0 from invoke fpevent_init
+01:38:30:107000 Status 0 from invoke fpcmd_init
+01:38:30:107000 Status 0 from invoke fpconsole_init
+01:38:30:107000 Status 0 from invoke fpdbg_init
+01:38:30:107000 Status 0 from invoke fpdevices_init
+01:38:30:107000 Status 0 from systemrun
+System started
+01:38:30:107000 Status 0 from echo
+01:38:30:107000 Status 0 from fileexist C:/Users/Youss/OneDrive/Desktop/Università/Design/bho/Virtual Controllers/CRB15000_5_95/internal/post_startup_action.cmd
+Goto to label: NO_POST_ACTION
+01:38:30:107000 Status 0 from goto NO_POST_ACTION
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/startup_with_axc.cmd
+01:38:30:107000 Status 0 from include NO_POST_ACTION
+Goto to label: END
+01:38:30:107000 Status 0 from goto END
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/startup.cmd

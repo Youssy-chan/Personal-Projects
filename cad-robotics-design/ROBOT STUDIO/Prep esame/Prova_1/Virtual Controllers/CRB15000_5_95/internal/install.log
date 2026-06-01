@@ -1,0 +1,1762 @@
+04:37:35:411000 Status 0 from startup_log
+Begin system installation
+04:37:35:411000 Status 0 from echo
+04:37:35:411000 Status 0 from basedefs
+04:37:58:101000 Status 0 from invoke2 s17_initialize
+04:37:58:101000 Status 0 from if_feature_present abb.robotics.controller.axiscomputer.none
+Goto to label: END
+04:37:58:101000 Status 0 from goto END
+C:/Users/Youss/OneDrive/Desktop/Università/Design/ROBOT STUDIO/Prep esame/Prova_1/Virtual Controllers/CRB15000_5_95/TEMP has been mounted.
+04:38:13:63000 Status 0 from baseinit
+04:38:13:63000 Status 0 from uprobe_init
+04:38:13:71000 Status 0 from debug_service_base_init
+04:38:13:71000 Status 0 from invoke S33_01_create
+04:38:13:105000 Status 0 from S33_01_init
+04:38:13:105000 Status 0 from if_feature_present abb.robotics.controller.axiscomputer.none
+04:38:16:141000 Status 0 from invoke2 AxcServoControl_InitModule
+Goto to label: END
+04:38:16:141000 Status 0 from goto END
+04:38:16:141000 Status 0 from invoke S98_01_create
+04:38:16:141000 Status 0 from S98_01_setup
+04:38:16:141000 Status 0 from S98_01_init
+Illegal call: sysdmp_init must be called first!04:38:16:141000 Status -1 from sysdmp_init
+ ... will continue!
+Goto to label: VC_SKIP_SYSDMPTASK
+04:38:16:141000 Status 0 from ifvc VC_SKIP_SYSDMPTASK
+04:38:16:141000 Status 0 from debug_service_init
+Illegal call: sysdmp_init must be called first!04:38:16:141000 Status -1 from sysdmp_add
+ ... will continue!
+04:38:16:141000 Status 0 from setstr $ANSWER
+04:38:16:141000 Status 0 from selectmedia $ANSWER
+04:38:19:3000 Status 0 from task 
+04:38:19:9000 Status 0 from synchronize task
+04:38:19:9000 Status 0 from go task
+04:38:20:719000 Status 0 from task 
+04:38:21:857000 Status 0 from task 
+04:38:24:495000 Status 0 from task 
+
+24-08-20  22:23:35 MC0: type = STATE_CHANGE id = Operational code = 46 (10046)
+
+04:38:24:495000 Status 0 from basenew
+Base services started
+04:38:24:495000 Status 0 from echo
+04:38:24:495000 Status 0 from S98_01_new
+04:38:24:495000 Status 0 from setenv
+04:38:24:495000 Status 0 from setenv
+Goto to label: VC_PYTHON
+04:38:24:495000 Status 0 from ifvc VC_PYTHON
+04:38:24:495000 Status 0 from setenv
+04:38:24:495000 Status 0 from setenv
+04:38:24:495000 Status 0 from init eio
+04:38:24:495000 Status 0 from init sio
+ Size of MOC_IO_BS_BUFFER 18844
+04:38:24:495000 Status 0 from init motion
+04:38:24:495000 Status 0 from init rol
+04:38:24:495000 Status 0 from init cab
+04:38:24:495000 Status 0 from init bar
+04:38:24:495000 Status 0 from init pgmrun
+04:38:24:495000 Status 0 from init rapid
+04:38:24:495000 Status 0 from init puscfg
+04:38:24:495000 Status 0 from setEioValidationLevel
+04:38:27:673000 Status 0 from task 
+04:38:29:771000 Status 0 from task 
+04:38:29:771000 Status 0 from setvar
+Installing configuration system
+04:38:29:771000 Status 0 from echo
+04:38:30:41000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/sys.cfg
+04:38:30:309000 Status 0 from invoke2 cfg_create_type_xml
+04:38:30:359000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/eio_internal.cfg
+04:38:30:672000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/sys_eiosig.cfg
+Goto to label: NO_PIB_SAF
+04:38:30:672000 Status 0 from getkey pib
+04:38:31:19000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/pgmbtn.cfg
+04:38:31:343000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/rlmset.cfg
+04:38:31:743000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/rlmove.cfg
+04:38:31:986000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/rlmsys.cfg
+04:38:32:340000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/rlexe.cfg
+04:38:32:680000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/rlcom.cfg
+04:38:33:68000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/rlsocket.cfg
+04:38:33:414000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/rlio.cfg
+04:38:33:755000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/rltrap.cfg
+04:38:34:114000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/rlmmec.cfg
+04:38:34:348000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/rlsys.cfg
+04:38:34:669000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/rlload.cfg
+04:38:35:16000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/rlmsrc.cfg
+04:38:35:351000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/rltrig.cfg
+04:38:35:647000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/rlpid.cfg
+04:38:36:98000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/rlsmod.cfg
+04:38:36:386000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/rlfsta.cfg
+04:38:36:619000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/rlraps.cfg
+04:38:36:892000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/rlmath.cfg
+04:38:37:169000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/rlmexe.cfg
+04:38:37:311000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/rlsset.cfg
+04:38:37:413000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/rlstr.cfg
+04:38:37:605000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/rlcure.cfg
+04:38:37:908000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/rlwz.cfg
+04:38:38:144000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/rltool.cfg
+04:38:38:386000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/rlsym.cfg
+04:38:38:709000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/rlbit.cfg
+04:38:39:61000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/rlcal.cfg
+04:38:39:341000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/rlcyclic.cfg
+04:38:39:341000 Status 0 from setvar
+Goto to label: NO_PAINT_CNV
+04:38:39:341000 Status 0 from getkey paintMedia
+04:38:39:666000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/rlcnv.cfg
+Goto to label: NEXT_STEP
+04:38:39:666000 Status 0 from goto NEXT_STEP
+04:38:40:731000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/rlind.cfg
+04:38:41:17000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/rlcorr.cfg
+04:38:41:255000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/rlopr.cfg
+04:38:41:544000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/rldata.cfg
+04:38:41:904000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/rlmq.cfg
+04:38:42:126000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/rltrigios.cfg
+04:38:42:378000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/mockit1.cfg
+04:38:43:307000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/calwrist.cfg
+04:38:43:674000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/usrmmc.cfg
+04:38:44:661000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/usrmmc_mc.cfg
+04:38:44:906000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/bat_shutdownmmc.cfg
+04:38:45:197000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/rlbasic.cfg
+04:38:45:438000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/calwrist_sys.cfg
+04:38:45:667000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/bat_shutdownsys.cfg
+04:38:45:667000 Status 0 from is_option_present SAFEMOVEPRO
+Goto to label: SAFE_MOVE_OPTION_PRESENT
+04:38:45:667000 Status 0 from goto SAFE_MOVE_OPTION_PRESENT
+04:38:45:667000 Status 0 from if_feature_present abb.robotics.robots.robots.irb14050.0_5-0_5
+04:38:45:811000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/CBC_SYS.cfg
+04:38:46:115000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/CBC_SYS_mmc.cfg
+Goto to label: NEXT_STEP
+04:38:46:115000 Status 0 from goto NEXT_STEP
+04:38:46:320000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/linked_m_sup_base.cfg
+Goto to label: CRB15000_PRESENT
+04:38:46:320000 Status 0 from if_feature_present abb.robotics.robots.robots.crb15000.5-0_95
+04:38:46:531000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/SYS_TRQ_CALIB.cfg
+04:38:46:716000 Status 0 from copy C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/TorqueSensorCalib.jpg
+04:38:46:984000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/usrsys.cfg
+04:38:47:176000 Status 0 from invoke2 cfg_create_type_xml
+04:38:47:393000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/sio_net_nondeletable.cfg
+04:38:47:606000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/sio_net_internal.cfg
+04:38:47:764000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/sio_net.cfg
+04:38:47:973000 Status 0 from invoke2 cfg_create_type_xml
+04:38:48:175000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/sys_fan_control.cfg
+04:38:48:181000 Status 0 from synchronize task
+04:38:48:181000 Status 0 from go task
+Installing system files
+04:38:48:181000 Status 0 from echo
+04:38:48:181000 Status 0 from direxist C:/Users/Youss/OneDrive/Desktop/Università/Design/ROBOT STUDIO/Prep esame/Prova_1/Virtual Controllers/CRB15000_5_95/internal/OPTIONS/SC
+04:38:48:181000 Status 0 from mkdir C:/Users/Youss/OneDrive/Desktop/Università/Design/ROBOT STUDIO/Prep esame/Prova_1/Virtual Controllers/CRB15000_5_95/internal/OPTIONS/SC
+04:38:48:181000 Status 0 from fileexist C:/Users/Youss/OneDrive/Desktop/Università/Design/ROBOT STUDIO/Prep esame/Prova_1/Virtual Controllers/CRB15000_5_95/internal/opt_l0.cmd
+Goto to label: NEXT_STEP
+04:38:48:181000 Status 0 from goto NEXT_STEP
+04:38:48:181000 Status 0 from fileexist C:/Users/Youss/OneDrive/Desktop/Università/Design/ROBOT STUDIO/Prep esame/Prova_1/Virtual Controllers/CRB15000_5_95/internal/option.cmd
+Goto to label: NEXT_STEP
+04:38:48:181000 Status 0 from goto NEXT_STEP
+04:38:48:181000 Status 0 from fileexist C:/Users/Youss/OneDrive/Desktop/Università/Design/ROBOT STUDIO/Prep esame/Prova_1/Virtual Controllers/CRB15000_5_95/internal/opt_l1.cmd
+Goto to label: NEXT_STEP
+04:38:48:181000 Status 0 from goto NEXT_STEP
+04:38:48:181000 Status 0 from fileexist C:/Users/Youss/OneDrive/Desktop/Università/Design/ROBOT STUDIO/Prep esame/Prova_1/Virtual Controllers/CRB15000_5_95/internal/opt_l2.cmd
+Goto to label: NEXT_STEP
+04:38:48:181000 Status 0 from goto NEXT_STEP
+04:38:48:181000 Status 0 from fileexist C:/Users/Youss/OneDrive/Desktop/Università/Design/ROBOT STUDIO/Prep esame/Prova_1/Virtual Controllers/CRB15000_5_95/internal/opt_l3.cmd
+Goto to label: NEXT_STEP
+04:38:48:181000 Status 0 from goto NEXT_STEP
+04:38:48:181000 Status 0 from fileexist C:/Users/Youss/OneDrive/Desktop/Università/Design/ROBOT STUDIO/Prep esame/Prova_1/Virtual Controllers/CRB15000_5_95/internal/upgrade_opt.cmd
+Goto to label: NEXT_STEP
+04:38:48:181000 Status 0 from goto NEXT_STEP
+04:38:48:181000 Status 0 from register 
+04:38:48:246000 Status 0 from register 
+04:38:48:497000 Status 0 from register 
+04:38:48:909000 Status 0 from register 
+04:38:48:969000 Status 0 from register 
+04:38:49:185000 Status 0 from register 
+04:38:49:264000 Status 0 from register 
+04:38:49:264000 Status 0 from register 
+04:38:49:264000 Status 0 from fileexist C:/Users/Youss/OneDrive/Desktop/Università/Design/ROBOT STUDIO/Prep esame/Prova_1/Virtual Controllers/CRB15000_5_95/HOME/rapid_edit_rules.xml
+Goto to label: NEXT_STEP
+04:38:49:264000 Status 0 from goto NEXT_STEP
+04:38:49:264000 Status 0 from setstr $ANSWER
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/rules/install.cmd
+04:38:56:882000 Status 0 from register 
+04:38:56:882000 Status 0 from setstr $CFGRULES
+04:38:57:637000 Status 0 from register 
+04:38:58:73000 Status 0 from register 
+04:38:58:255000 Status 0 from register 
+04:38:58:693000 Status 0 from register 
+04:38:59:118000 Status 0 from register 
+04:38:59:391000 Status 0 from register 
+04:38:59:921000 Status 0 from register 
+04:39:00:309000 Status 0 from register 
+04:39:00:784000 Status 0 from register 
+04:39:01:129000 Status 0 from register 
+Goto to label: NO_RC
+04:39:01:129000 Status 0 from ifvc NO_RC
+Goto to label: ST
+04:39:01:129000 Status 0 from getkey MT
+04:39:01:498000 Status 0 from register 
+Goto to label: END_UDPUC
+04:39:01:498000 Status 0 from is_option_present UDPUC
+Goto to label: END_IV
+04:39:01:498000 Status 0 from is_option_present IV
+04:39:01:552000 Status 0 from register 
+04:39:03:186000 Status 0 from register 
+04:39:03:249000 Status 0 from register 
+04:39:03:249000 Status 0 from setstr $ELOGRULES
+04:39:03:541000 Status 0 from register 
+04:39:03:756000 Status 0 from register 
+04:39:04:76000 Status 0 from register 
+04:39:04:385000 Status 0 from register 
+04:39:04:692000 Status 0 from register 
+04:39:05:5000 Status 0 from register 
+04:39:05:306000 Status 0 from register 
+04:39:05:622000 Status 0 from register 
+04:39:05:942000 Status 0 from register 
+04:39:06:249000 Status 0 from register 
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/rules/install.cmd
+Goto to label: NEXT_STEP
+04:39:06:249000 Status 0 from selectmedia 
+04:39:06:249000 Status 0 from setstr $ANSWER
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/install.cmd
+04:39:29:605000 Status 0 from setvar
+04:39:29:605000 Status 0 from getkey LanguageCode
+Goto to label: SET_LANGUAGE
+04:39:29:605000 Status 0 from goto SET_LANGUAGE
+04:39:29:824000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/en.cfg
+04:39:29:824000 Status 0 from setenv
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/instlang.cmd
+04:39:36:287000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/language/install.cmd
+04:39:37:451000 Status 0 from setstr $TXTPATH
+Goto to label: INSTALL_FILE
+04:39:37:881000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../en/controller/rapid/roloptext.xml
+04:39:37:881000 Status 0 from text C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../en/controller/rapid/roloptext.xml
+Goto to label: INSTALL_FILE
+04:39:38:151000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../en/controller/rapid/calwrist.xml
+04:39:38:151000 Status 0 from text C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../en/controller/rapid/calwrist.xml
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/language/install.cmd
+04:39:38:151000 Status 0 from include INSTALL_FILE
+04:39:38:151000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/language/install.cmd
+04:39:38:151000 Status 0 from setstr $TXTPATH
+Goto to label: INSTALL_FILE
+04:39:38:545000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../cs/controller/rapid/roloptext.xml
+04:39:38:545000 Status 0 from text C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../cs/controller/rapid/roloptext.xml
+Goto to label: INSTALL_FILE
+04:39:38:813000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../cs/controller/rapid/calwrist.xml
+04:39:38:813000 Status 0 from text C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../cs/controller/rapid/calwrist.xml
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/language/install.cmd
+04:39:38:813000 Status 0 from include INSTALL_FILE
+04:39:38:813000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/language/install.cmd
+04:39:38:813000 Status 0 from setstr $TXTPATH
+Goto to label: INSTALL_FILE
+04:39:39:193000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../da/controller/rapid/roloptext.xml
+04:39:39:193000 Status 0 from text C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../da/controller/rapid/roloptext.xml
+Goto to label: INSTALL_FILE
+04:39:39:410000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../da/controller/rapid/calwrist.xml
+04:39:39:410000 Status 0 from text C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../da/controller/rapid/calwrist.xml
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/language/install.cmd
+04:39:39:410000 Status 0 from include INSTALL_FILE
+04:39:39:410000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/language/install.cmd
+04:39:39:410000 Status 0 from setstr $TXTPATH
+Goto to label: INSTALL_FILE
+04:39:39:794000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../de/controller/rapid/roloptext.xml
+04:39:39:794000 Status 0 from text C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../de/controller/rapid/roloptext.xml
+Goto to label: INSTALL_FILE
+04:39:39:974000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../de/controller/rapid/calwrist.xml
+04:39:39:974000 Status 0 from text C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../de/controller/rapid/calwrist.xml
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/language/install.cmd
+04:39:39:974000 Status 0 from include INSTALL_FILE
+04:39:39:974000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/language/install.cmd
+04:39:39:974000 Status 0 from setstr $TXTPATH
+Goto to label: INSTALL_FILE
+04:39:40:470000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../es/controller/rapid/roloptext.xml
+04:39:40:470000 Status 0 from text C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../es/controller/rapid/roloptext.xml
+Goto to label: INSTALL_FILE
+04:39:40:740000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../es/controller/rapid/calwrist.xml
+04:39:40:740000 Status 0 from text C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../es/controller/rapid/calwrist.xml
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/language/install.cmd
+04:39:40:740000 Status 0 from include INSTALL_FILE
+04:39:40:740000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/language/install.cmd
+04:39:40:740000 Status 0 from setstr $TXTPATH
+Goto to label: INSTALL_FILE
+04:39:41:242000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../fi/controller/rapid/roloptext.xml
+04:39:41:242000 Status 0 from text C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../fi/controller/rapid/roloptext.xml
+Goto to label: INSTALL_FILE
+04:39:41:503000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../fi/controller/rapid/calwrist.xml
+04:39:41:503000 Status 0 from text C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../fi/controller/rapid/calwrist.xml
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/language/install.cmd
+04:39:41:503000 Status 0 from include INSTALL_FILE
+04:39:41:503000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/language/install.cmd
+04:39:41:503000 Status 0 from setstr $TXTPATH
+Goto to label: INSTALL_FILE
+04:39:41:925000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../fr/controller/rapid/roloptext.xml
+04:39:41:925000 Status 0 from text C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../fr/controller/rapid/roloptext.xml
+Goto to label: INSTALL_FILE
+04:39:42:211000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../fr/controller/rapid/calwrist.xml
+04:39:42:211000 Status 0 from text C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../fr/controller/rapid/calwrist.xml
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/language/install.cmd
+04:39:42:211000 Status 0 from include INSTALL_FILE
+04:39:42:211000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/language/install.cmd
+04:39:42:211000 Status 0 from setstr $TXTPATH
+Goto to label: INSTALL_FILE
+04:39:42:586000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../hu/controller/rapid/roloptext.xml
+04:39:42:586000 Status 0 from text C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../hu/controller/rapid/roloptext.xml
+Goto to label: INSTALL_FILE
+04:39:42:804000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../hu/controller/rapid/calwrist.xml
+04:39:42:804000 Status 0 from text C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../hu/controller/rapid/calwrist.xml
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/language/install.cmd
+04:39:42:804000 Status 0 from include INSTALL_FILE
+04:39:42:804000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/language/install.cmd
+04:39:42:804000 Status 0 from setstr $TXTPATH
+Goto to label: INSTALL_FILE
+04:39:43:166000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../it/controller/rapid/roloptext.xml
+04:39:43:166000 Status 0 from text C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../it/controller/rapid/roloptext.xml
+Goto to label: INSTALL_FILE
+04:39:43:353000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../it/controller/rapid/calwrist.xml
+04:39:43:353000 Status 0 from text C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../it/controller/rapid/calwrist.xml
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/language/install.cmd
+04:39:43:353000 Status 0 from include INSTALL_FILE
+04:39:43:353000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/language/install.cmd
+04:39:43:353000 Status 0 from setstr $TXTPATH
+Goto to label: INSTALL_FILE
+04:39:43:678000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../ja/controller/rapid/roloptext.xml
+04:39:43:678000 Status 0 from text C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../ja/controller/rapid/roloptext.xml
+Goto to label: INSTALL_FILE
+04:39:43:885000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../ja/controller/rapid/calwrist.xml
+04:39:43:885000 Status 0 from text C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../ja/controller/rapid/calwrist.xml
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/language/install.cmd
+04:39:43:885000 Status 0 from include INSTALL_FILE
+04:39:43:885000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/language/install.cmd
+04:39:43:885000 Status 0 from setstr $TXTPATH
+Goto to label: INSTALL_FILE
+04:39:44:240000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../ko/controller/rapid/roloptext.xml
+04:39:44:240000 Status 0 from text C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../ko/controller/rapid/roloptext.xml
+Goto to label: INSTALL_FILE
+04:39:44:469000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../ko/controller/rapid/calwrist.xml
+04:39:44:469000 Status 0 from text C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../ko/controller/rapid/calwrist.xml
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/language/install.cmd
+04:39:44:469000 Status 0 from include INSTALL_FILE
+04:39:44:469000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/language/install.cmd
+04:39:44:469000 Status 0 from setstr $TXTPATH
+Goto to label: INSTALL_FILE
+04:39:44:887000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../nl/controller/rapid/roloptext.xml
+04:39:44:887000 Status 0 from text C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../nl/controller/rapid/roloptext.xml
+Goto to label: INSTALL_FILE
+04:39:45:98000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../nl/controller/rapid/calwrist.xml
+04:39:45:98000 Status 0 from text C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../nl/controller/rapid/calwrist.xml
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/language/install.cmd
+04:39:45:98000 Status 0 from include INSTALL_FILE
+04:39:45:98000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/language/install.cmd
+04:39:45:98000 Status 0 from setstr $TXTPATH
+Goto to label: INSTALL_FILE
+04:39:45:509000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../pl/controller/rapid/roloptext.xml
+04:39:45:509000 Status 0 from text C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../pl/controller/rapid/roloptext.xml
+Goto to label: INSTALL_FILE
+04:39:45:732000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../pl/controller/rapid/calwrist.xml
+04:39:45:732000 Status 0 from text C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../pl/controller/rapid/calwrist.xml
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/language/install.cmd
+04:39:45:732000 Status 0 from include INSTALL_FILE
+04:39:45:732000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/language/install.cmd
+04:39:45:732000 Status 0 from setstr $TXTPATH
+Goto to label: INSTALL_FILE
+04:39:46:117000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../pt/controller/rapid/roloptext.xml
+04:39:46:117000 Status 0 from text C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../pt/controller/rapid/roloptext.xml
+Goto to label: INSTALL_FILE
+04:39:46:323000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../pt/controller/rapid/calwrist.xml
+04:39:46:323000 Status 0 from text C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../pt/controller/rapid/calwrist.xml
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/language/install.cmd
+04:39:46:323000 Status 0 from include INSTALL_FILE
+04:39:46:323000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/language/install.cmd
+04:39:46:323000 Status 0 from setstr $TXTPATH
+Goto to label: INSTALL_FILE
+04:39:46:615000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../ro/controller/rapid/roloptext.xml
+04:39:46:615000 Status 0 from text C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../ro/controller/rapid/roloptext.xml
+Goto to label: INSTALL_FILE
+04:39:46:827000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../ro/controller/rapid/calwrist.xml
+04:39:46:827000 Status 0 from text C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../ro/controller/rapid/calwrist.xml
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/language/install.cmd
+04:39:46:827000 Status 0 from include INSTALL_FILE
+04:39:46:827000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/language/install.cmd
+04:39:46:827000 Status 0 from setstr $TXTPATH
+Goto to label: INSTALL_FILE
+04:39:47:176000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../ru/controller/rapid/roloptext.xml
+04:39:47:176000 Status 0 from text C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../ru/controller/rapid/roloptext.xml
+Goto to label: INSTALL_FILE
+04:39:47:383000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../ru/controller/rapid/calwrist.xml
+04:39:47:383000 Status 0 from text C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../ru/controller/rapid/calwrist.xml
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/language/install.cmd
+04:39:47:383000 Status 0 from include INSTALL_FILE
+04:39:47:383000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/language/install.cmd
+04:39:47:383000 Status 0 from setstr $TXTPATH
+Goto to label: INSTALL_FILE
+04:39:47:782000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../sl/controller/rapid/roloptext.xml
+04:39:47:782000 Status 0 from text C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../sl/controller/rapid/roloptext.xml
+Goto to label: INSTALL_FILE
+04:39:47:998000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../sl/controller/rapid/calwrist.xml
+04:39:47:998000 Status 0 from text C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../sl/controller/rapid/calwrist.xml
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/language/install.cmd
+04:39:47:998000 Status 0 from include INSTALL_FILE
+04:39:47:998000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/language/install.cmd
+04:39:47:998000 Status 0 from setstr $TXTPATH
+Goto to label: INSTALL_FILE
+04:39:48:347000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../sv/controller/rapid/roloptext.xml
+04:39:48:347000 Status 0 from text C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../sv/controller/rapid/roloptext.xml
+Goto to label: INSTALL_FILE
+04:39:48:548000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../sv/controller/rapid/calwrist.xml
+04:39:48:548000 Status 0 from text C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../sv/controller/rapid/calwrist.xml
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/language/install.cmd
+04:39:48:548000 Status 0 from include INSTALL_FILE
+04:39:48:548000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/language/install.cmd
+04:39:48:548000 Status 0 from setstr $TXTPATH
+Goto to label: INSTALL_FILE
+04:39:48:910000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../tr/controller/rapid/roloptext.xml
+04:39:48:910000 Status 0 from text C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../tr/controller/rapid/roloptext.xml
+Goto to label: INSTALL_FILE
+04:39:49:121000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../tr/controller/rapid/calwrist.xml
+04:39:49:121000 Status 0 from text C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../tr/controller/rapid/calwrist.xml
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/language/install.cmd
+04:39:49:121000 Status 0 from include INSTALL_FILE
+04:39:49:121000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/language/install.cmd
+04:39:49:121000 Status 0 from setstr $TXTPATH
+Goto to label: INSTALL_FILE
+04:39:49:426000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../zh/controller/rapid/roloptext.xml
+04:39:49:426000 Status 0 from text C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../zh/controller/rapid/roloptext.xml
+Goto to label: INSTALL_FILE
+04:39:49:648000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../zh/controller/rapid/calwrist.xml
+04:39:49:648000 Status 0 from text C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/../zh/controller/rapid/calwrist.xml
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/language/install.cmd
+04:39:49:648000 Status 0 from include INSTALL_FILE
+04:39:49:648000 Status 0 from setstr $LANG
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/instlang.cmd
+04:39:49:648000 Status 0 from include $LANG
+04:39:49:673000 Status 0 from register 
+04:39:50:724000 Status 0 from register 
+04:39:51:699000 Status 0 from register 
+04:39:52:742000 Status 0 from register 
+04:39:53:791000 Status 0 from register 
+04:39:54:378000 Status 0 from register 
+04:39:55:394000 Status 0 from register 
+04:39:56:431000 Status 0 from register 
+04:39:57:477000 Status 0 from register 
+04:39:58:523000 Status 0 from register 
+04:39:59:544000 Status 0 from register 
+04:40:00:506000 Status 0 from register 
+04:40:01:593000 Status 0 from register 
+04:40:02:653000 Status 0 from register 
+04:40:03:698000 Status 0 from register 
+04:40:04:703000 Status 0 from register 
+04:40:05:739000 Status 0 from register 
+04:40:06:799000 Status 0 from register 
+04:40:07:830000 Status 0 from register 
+04:40:08:917000 Status 0 from register 
+04:40:09:941000 Status 0 from register 
+04:40:10:991000 Status 0 from register 
+04:40:11:817000 Status 0 from register 
+04:40:12:642000 Status 0 from register 
+04:40:13:578000 Status 0 from register 
+04:40:14:755000 Status 0 from register 
+04:40:15:807000 Status 0 from register 
+04:40:16:852000 Status 0 from register 
+04:40:17:883000 Status 0 from register 
+04:40:18:891000 Status 0 from register 
+04:40:19:985000 Status 0 from register 
+04:40:21:28000 Status 0 from register 
+04:40:22:154000 Status 0 from register 
+04:40:23:282000 Status 0 from register 
+04:40:24:376000 Status 0 from register 
+04:40:25:551000 Status 0 from register 
+04:40:26:522000 Status 0 from register 
+04:40:27:660000 Status 0 from register 
+04:40:28:774000 Status 0 from register 
+04:40:29:859000 Status 0 from register 
+04:40:30:899000 Status 0 from register 
+04:40:31:662000 Status 0 from register 
+04:40:32:554000 Status 0 from register 
+04:40:33:614000 Status 0 from register 
+04:40:34:24000 Status 0 from register 
+04:40:34:510000 Status 0 from register 
+04:40:34:595000 Status 0 from register 
+04:40:35:33000 Status 0 from register 
+04:40:35:113000 Status 0 from register 
+04:40:35:404000 Status 0 from register 
+04:40:35:766000 Status 0 from register 
+04:40:36:49000 Status 0 from register 
+04:40:36:189000 Status 0 from register 
+04:40:36:466000 Status 0 from register 
+04:40:36:760000 Status 0 from register 
+04:40:37:136000 Status 0 from register 
+04:40:37:680000 Status 0 from register 
+04:40:38:16000 Status 0 from register 
+04:40:38:544000 Status 0 from register 
+04:40:38:913000 Status 0 from register 
+Goto to label: ST
+04:40:38:913000 Status 0 from getkey MT
+04:40:39:244000 Status 0 from register 
+Goto to label: END_UDPUC
+04:40:39:244000 Status 0 from is_option_present UDPUC
+Goto to label: END_IV
+04:40:39:244000 Status 0 from is_option_present IV
+04:40:39:839000 Status 0 from register 
+Goto to label: NO_ERROR
+04:40:39:839000 Status 0 from goto NO_ERROR
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/language/install/install.cmd
+Goto to label: NEXT_STEP
+04:40:39:839000 Status 0 from selectmedia 
+04:40:39:839000 Status 0 from setstr $BOOTPATH_SAVED
+04:40:39:839000 Status 0 from setstr $BOOTPATH
+Goto to label: LOAD_CMD
+04:40:47:435000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/enms/en_base_install.cmd
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/enms/en_base_install.cmd
+Goto to label: INSTALL_FILE
+04:40:48:507000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/enms/en_base_cfgtypes.xml
+04:40:48:507000 Status 0 from invoke2 cfg_create_type_xml
+04:40:48:507000 Status 0 from setvar
+Goto to label: STANDARD_SCANNER
+04:40:48:507000 Status 0 from getkey CIPSCANNER
+04:40:48:507000 Status 0 from setvar
+Goto to label: NEXT_STEP
+04:40:48:507000 Status 0 from getkey ENIPSCANNER
+04:40:48:507000 Status 0 from setvar
+Goto to label: NEXT_STEP
+04:40:48:507000 Status 0 from getkey ENIPADAPTER
+Goto to label: ENMS_NOT_FOUND
+04:40:48:507000 Status 0 from getkey ENIPSCANNER
+04:40:48:665000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/enms/en_base.cfg
+04:40:49:125000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/enms/en_base_template.cfg
+04:40:49:590000 Status 0 from register 
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/instlang.cmd
+04:40:49:590000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/enms/language/install.cmd
+Goto to label: INSTALL_FILE
+04:40:50:809000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/enms/language/en/en_cfgtext.xml
+04:40:50:948000 Status 0 from register 
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/enms/language/install.cmd
+04:40:50:948000 Status 0 from include INSTALL_FILE
+04:40:50:948000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/enms/language/install.cmd
+04:40:50:948000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/enms/language/cs/en_cfgtext.xml
+Goto to label: END
+04:40:50:948000 Status 0 from goto END
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/enms/language/install.cmd
+04:40:50:948000 Status 0 from include END
+04:40:50:948000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/enms/language/install.cmd
+04:40:50:948000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/enms/language/da/en_cfgtext.xml
+Goto to label: END
+04:40:50:948000 Status 0 from goto END
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/enms/language/install.cmd
+04:40:50:948000 Status 0 from include END
+04:40:50:948000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/enms/language/install.cmd
+04:40:50:948000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/enms/language/de/en_cfgtext.xml
+Goto to label: END
+04:40:50:948000 Status 0 from goto END
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/enms/language/install.cmd
+04:40:50:948000 Status 0 from include END
+04:40:50:948000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/enms/language/install.cmd
+04:40:50:948000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/enms/language/es/en_cfgtext.xml
+Goto to label: END
+04:40:50:948000 Status 0 from goto END
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/enms/language/install.cmd
+04:40:50:948000 Status 0 from include END
+04:40:50:948000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/enms/language/install.cmd
+04:40:50:948000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/enms/language/fi/en_cfgtext.xml
+Goto to label: END
+04:40:50:948000 Status 0 from goto END
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/enms/language/install.cmd
+04:40:50:948000 Status 0 from include END
+04:40:50:948000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/enms/language/install.cmd
+04:40:50:948000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/enms/language/fr/en_cfgtext.xml
+Goto to label: END
+04:40:50:948000 Status 0 from goto END
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/enms/language/install.cmd
+04:40:50:948000 Status 0 from include END
+04:40:50:948000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/enms/language/install.cmd
+04:40:50:948000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/enms/language/hu/en_cfgtext.xml
+Goto to label: END
+04:40:50:948000 Status 0 from goto END
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/enms/language/install.cmd
+04:40:50:948000 Status 0 from include END
+04:40:50:948000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/enms/language/install.cmd
+04:40:50:948000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/enms/language/it/en_cfgtext.xml
+Goto to label: END
+04:40:50:948000 Status 0 from goto END
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/enms/language/install.cmd
+04:40:50:948000 Status 0 from include END
+04:40:50:948000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/enms/language/install.cmd
+04:40:50:948000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/enms/language/ja/en_cfgtext.xml
+Goto to label: END
+04:40:50:948000 Status 0 from goto END
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/enms/language/install.cmd
+04:40:50:948000 Status 0 from include END
+04:40:50:948000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/enms/language/install.cmd
+04:40:50:948000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/enms/language/ko/en_cfgtext.xml
+Goto to label: END
+04:40:50:948000 Status 0 from goto END
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/enms/language/install.cmd
+04:40:50:948000 Status 0 from include END
+04:40:50:948000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/enms/language/install.cmd
+04:40:50:948000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/enms/language/nl/en_cfgtext.xml
+Goto to label: END
+04:40:50:948000 Status 0 from goto END
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/enms/language/install.cmd
+04:40:50:948000 Status 0 from include END
+04:40:50:948000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/enms/language/install.cmd
+04:40:50:948000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/enms/language/pl/en_cfgtext.xml
+Goto to label: END
+04:40:50:948000 Status 0 from goto END
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/enms/language/install.cmd
+04:40:50:948000 Status 0 from include END
+04:40:50:948000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/enms/language/install.cmd
+04:40:50:948000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/enms/language/pt/en_cfgtext.xml
+Goto to label: END
+04:40:50:948000 Status 0 from goto END
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/enms/language/install.cmd
+04:40:50:948000 Status 0 from include END
+04:40:50:948000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/enms/language/install.cmd
+04:40:50:948000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/enms/language/ro/en_cfgtext.xml
+Goto to label: END
+04:40:50:948000 Status 0 from goto END
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/enms/language/install.cmd
+04:40:50:948000 Status 0 from include END
+04:40:50:948000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/enms/language/install.cmd
+04:40:50:948000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/enms/language/ru/en_cfgtext.xml
+Goto to label: END
+04:40:50:948000 Status 0 from goto END
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/enms/language/install.cmd
+04:40:50:948000 Status 0 from include END
+04:40:50:948000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/enms/language/install.cmd
+04:40:50:948000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/enms/language/sl/en_cfgtext.xml
+Goto to label: END
+04:40:50:948000 Status 0 from goto END
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/enms/language/install.cmd
+04:40:50:948000 Status 0 from include END
+04:40:50:948000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/enms/language/install.cmd
+04:40:50:948000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/enms/language/sv/en_cfgtext.xml
+Goto to label: END
+04:40:50:948000 Status 0 from goto END
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/enms/language/install.cmd
+04:40:50:948000 Status 0 from include END
+04:40:50:948000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/enms/language/install.cmd
+04:40:50:948000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/enms/language/tr/en_cfgtext.xml
+Goto to label: END
+04:40:50:948000 Status 0 from goto END
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/enms/language/install.cmd
+04:40:50:948000 Status 0 from include END
+04:40:50:948000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/enms/language/install.cmd
+04:40:50:948000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/enms/language/zh/en_cfgtext.xml
+Goto to label: END
+04:40:50:948000 Status 0 from goto END
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/enms/language/install.cmd
+04:40:50:948000 Status 0 from include END
+04:40:50:948000 Status 0 from setstr $LANG
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/instlang.cmd
+04:40:50:948000 Status 0 from include $LANG
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/enms/en_base_install.cmd
+04:40:50:948000 Status 0 from include $LANG
+04:40:50:948000 Status 0 from setstr $BOOTPATH
+04:40:50:948000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/SEC_SYSTEM_BASE.cfg.enc
+04:40:51:258000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/INT_SYSTEM_BASE.cfg
+04:40:51:562000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/EXT_SYSTEM_BASE.cfg
+Installing integrated IO driver
+04:40:51:562000 Status 0 from echo
+04:40:51:562000 Status 0 from setstr $BOOTPATH_SAVED
+04:40:51:562000 Status 0 from setstr $BOOTPATH
+Goto to label: LOAD_CMD
+04:40:57:225000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/integratedIO/install.cmd
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/integratedIO/install.cmd
+04:40:57:225000 Status 0 from if_feature_present abb.robotics.controller.io.integrated
+Controller variant does not support integratedIO, skipping
+04:40:57:225000 Status 0 from echo
+Goto to label: END
+04:40:57:225000 Status 0 from goto END
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/integratedIO/install.cmd
+04:40:57:225000 Status 0 from include END
+04:40:57:225000 Status 0 from setstr $BOOTPATH
+Goto to label: LOAD_CMD
+04:41:02:368000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/instdrv.cmd
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/instdrv.cmd
+04:41:02:368000 Status 0 from getkey Drive1
+04:41:02:368000 Status 0 from setvar
+04:41:02:368000 Status 0 from setstr $TEMP1
+04:41:02:368000 Status 0 from getkey Drive1Select
+04:41:02:368000 Status 0 from mediaexist DC48
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/drives/drv1_lib/install.cmd
+04:41:20:191000 Status 0 from setvar
+04:41:20:191000 Status 0 from getkey Drive1Module
+Goto to label: DM48
+04:41:20:191000 Status 0 from goto DM48
+Installing config for drive module
+04:41:20:191000 Status 0 from echo
+04:41:21:275000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/drives/drv1_lib/drvcfg/SEC_DRIVE_MODULE1_ADU_48.cfg.enc
+04:41:21:537000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/drives/drv1_lib/drvcfg/EXT_DRIVE_MODULE1_ADU_48.cfg
+Goto to label: DRIVE_UNIT
+04:41:21:537000 Status 0 from goto DRIVE_UNIT
+04:41:21:537000 Status 0 from setvar
+04:41:21:537000 Status 0 from getkey Drive1Unit
+Goto to label: DU48
+04:41:21:537000 Status 0 from goto DU48
+Installing config for drive unit
+04:41:21:537000 Status 0 from echo
+04:41:21:810000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/drives/drv1_lib/drvcfg/INT_DRIVE_ADU48_48_M1_DM1.cfg
+04:41:22:132000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/drives/drv1_lib/drvcfg/INT_DRIVE_ADU48_48_M2_DM1.cfg
+04:41:22:367000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/drives/drv1_lib/drvcfg/INT_DRIVE_ADU48_48_M3_DM1.cfg
+04:41:22:661000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/drives/drv1_lib/drvcfg/INT_DRIVE_ADU48_48_M4_DM1.cfg
+04:41:22:985000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/drives/drv1_lib/drvcfg/INT_DRIVE_ADU48_48_M5_DM1.cfg
+04:41:23:296000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/drives/drv1_lib/drvcfg/INT_DRIVE_ADU48_48_M6_DM1.cfg
+Goto to label: DC_LINK
+04:41:23:296000 Status 0 from goto DC_LINK
+04:41:23:296000 Status 0 from setvar
+04:41:23:296000 Status 0 from getkey Drive1Select
+Goto to label: DC48
+04:41:23:296000 Status 0 from goto DC48
+Installing config for DC link 48
+04:41:23:296000 Status 0 from echo
+04:41:23:499000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/drives/drv1_lib/drvcfg/INT_RECTIFIER_MRU48_DM1.cfg
+04:41:23:699000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/drives/drv1_lib/drvcfg/SEC_RECTIFIER_MRU48_DM1.cfg.enc
+04:41:23:947000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/drives/drv1_lib/drvcfg/INT_TRAFO9_DM1.cfg
+Goto to label: EXTAXPOS1_LABEL
+04:41:23:947000 Status 0 from goto EXTAXPOS1_LABEL
+04:41:23:947000 Status 0 from setvar
+Goto to label: EXTAXPOS1NN
+04:41:23:947000 Status 0 from getkey AddAx1Pos1Select
+No additional axis in position 1
+04:41:23:947000 Status 0 from echo
+Goto to label: END_LABEL
+04:41:23:947000 Status 0 from goto END_LABEL
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/drives/drv1_lib/install.cmd
+Goto to label: DRV2
+04:41:23:947000 Status 0 from selectmedia AddAx1Pos1Select
+Goto to label: TRY_NEXT
+04:41:23:947000 Status 0 from getkey Drive2
+Goto to label: TRY_NEXT
+04:41:23:947000 Status 0 from getkey Drive3
+Goto to label: END_LABEL
+04:41:23:947000 Status 0 from getkey Drive4
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/instdrv.cmd
+04:41:23:947000 Status 0 from include END_LABEL
+Goto to label: LOAD_CMD
+04:41:33:294000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/instirb.cmd
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/instirb.cmd
+04:41:33:294000 Status 0 from fileexist C:/Users/Youss/OneDrive/Desktop/Università/Design/ROBOT STUDIO/Prep esame/Prova_1/Virtual Controllers/CRB15000_5_95/DATA/EXT_MOC.cfg
+Goto to label: IRB_INSTALL
+04:41:33:294000 Status 0 from goto IRB_INSTALL
+04:41:33:294000 Status 0 from setvar
+04:41:33:294000 Status 0 from getkey IrbOpt
+04:41:33:294000 Status 0 from setstr $ANSWER
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/Robots_1.8.0/install.cmd
+04:41:38:4000 Status 0 from if INSTALL_OPTIONS
+04:41:38:84000 Status 0 from register $PRODUCTS/Robots_1.8.0
+04:41:38:84000 Status 0 from setenv
+04:41:38:84000 Status 0 from setstr $ROBOTS
+04:41:38:84000 Status 0 from if END_LABEL
+04:41:38:625000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/Robots_1.8.0/system/SEC_SYSTEM.cfg.enc
+04:41:38:625000 Status 0 from setvar
+04:41:38:625000 Status 0 from getkey Irb1
+04:41:38:625000 Status 0 from setvar
+04:41:38:625000 Status 0 from setstr $TEMP1
+04:41:38:625000 Status 0 from getkey Irb1Desc
+04:41:38:625000 Status 0 from mediaexist CRB 15000-5/0.95
+04:41:38:625000 Status 0 from setvar
+04:41:38:625000 Status 0 from getkey Irb1MediaSelect
+Goto to label: LOAD_IRB
+04:41:41:742000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/Robots_1.8.0/robots/crb1_15000/install.cmd
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/Robots_1.8.0/robots/crb1_15000/install.cmd
+
+04:41:41:742000 Status 0 from print
+CRB 15000 family
+04:41:41:742000 Status 0 from echo
+Goto to label: CLEANSC
+04:41:41:742000 Status 0 from direxist C:/Users/Youss/OneDrive/Desktop/Università/Design/ROBOT STUDIO/Prep esame/Prova_1/Virtual Controllers/CRB15000_5_95/internal/OPTIONS/SC
+04:41:41:742000 Status 0 from fileexist C:/Users/Youss/OneDrive/Desktop/Università/Design/ROBOT STUDIO/Prep esame/Prova_1/Virtual Controllers/CRB15000_5_95/internal/OPTIONS/SC/SC_ROB_1.xml
+Goto to label: NEXT_STEP
+04:41:41:742000 Status 0 from goto NEXT_STEP
+04:41:41:742000 Status 0 from setvar
+04:41:41:742000 Status 0 from getkey Irb1Desc
+Installing CRB 15000-5/0.95
+04:41:41:742000 Status 0 from echo
+04:41:41:742000 Status 0 from getkey Irb1Select
+Goto to label: CRB15000_0_95_5
+04:41:41:742000 Status 0 from goto CRB15000_0_95_5
+04:41:42:125000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/Robots_1.8.0/robots/crb1_15000/crbcfg/SEC_15000_0.95_5_1.cfg.enc
+04:41:44:89000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/Robots_1.8.0/robots/crb1_15000/crbcfg/INT_15000_0.95_5_1.cfg
+04:41:44:548000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/Robots_1.8.0/robots/crb1_15000/crbcfg/EXT_15000_0.95_5_1.cfg
+04:41:45:149000 Status 0 from copy C:/Users/Youss/AppData/Local/ABB/RobotWare/Robots_1.8.0/robots/crb1_15000/crbcfg/SC_15000_0.95_5_1.xml
+Goto to label: TRY_NEXT
+04:41:45:149000 Status 0 from goto TRY_NEXT
+04:41:45:149000 Status 0 from getkey FCTRQSENS
+Force control configuration for ROB_1 is foc15000_1.cfg
+04:41:45:149000 Status 0 from echo
+04:41:45:436000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/Robots_1.8.0/robots/crb1_15000/crbcfg/foc15000_1.cfg
+Goto to label: TRY_NEXT
+04:41:45:436000 Status 0 from goto TRY_NEXT
+Goto to label: END_LABEL
+04:41:45:436000 Status 0 from goto END_LABEL
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/Robots_1.8.0/robots/crb1_15000/install.cmd
+Goto to label: TRY_NEXT
+04:41:45:436000 Status 0 from selectmedia MOC
+04:41:45:436000 Status 0 from setvar
+Goto to label: END_LABEL
+04:41:45:436000 Status 0 from goto END_LABEL
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/Robots_1.8.0/install.cmd
+04:41:45:436000 Status 0 from selectmedia MOC
+04:41:45:436000 Status 0 from setvar
+04:41:45:436000 Status 0 from getkey Irb1
+04:41:45:436000 Status 0 from setvar
+Goto to label: NO_7AX
+04:41:45:436000 Status 0 from getkey 7AX
+Goto to label: NO_DUAL_ARM_DM
+04:41:45:436000 Status 0 from getkey DUAL_ARM_DM
+Goto to label: STD
+04:41:45:436000 Status 0 from getkey MM
+04:41:45:585000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/tasksys.cfg
+04:41:45:585000 Status 0 from setvar
+Goto to label: TRY_NEXT
+04:41:45:585000 Status 0 from goto TRY_NEXT
+Goto to label: TRY_NEXT
+04:41:45:585000 Status 0 from getkey Irb2
+Goto to label: TRY_NEXT
+04:41:45:585000 Status 0 from getkey Irb3
+Goto to label: TRY_NEXT
+04:41:45:585000 Status 0 from getkey Irb4
+04:41:45:585000 Status 0 from if NO_IRB
+Goto to label: END_LABEL
+04:41:45:585000 Status 0 from goto END_LABEL
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/instirb.cmd
+04:41:45:585000 Status 0 from include END_LABEL
+04:41:45:585000 Status 0 from setvar
+04:41:45:585000 Status 0 from setvar
+04:41:45:585000 Status 0 from setstr $OPTIONLEVEL
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/instopt.cmd
+Goto to label: END_OF_LOOP
+04:41:47:85000 Status 0 from getkey OptionL0
+04:41:47:85000 Status 0 from setvar
+Goto to label: END_OF_FILE
+04:41:47:85000 Status 0 from goto END_OF_FILE
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/instopt.cmd
+04:41:47:85000 Status 0 from loop END_OF_FILE
+04:41:47:85000 Status 0 from setvar
+04:41:47:85000 Status 0 from setvar
+04:41:47:85000 Status 0 from setstr $OPTIONLEVEL
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/instopt.cmd
+Goto to label: END_OF_LOOP
+04:41:47:85000 Status 0 from getkey OptionL1
+04:41:47:85000 Status 0 from setvar
+Goto to label: END_OF_FILE
+04:41:47:85000 Status 0 from goto END_OF_FILE
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/instopt.cmd
+04:41:47:85000 Status 0 from loop END_OF_FILE
+04:41:47:85000 Status 0 from setvar
+04:41:47:85000 Status 0 from setvar
+04:41:47:85000 Status 0 from setstr $OPTIONLEVEL
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/instopt.cmd
+04:41:47:85000 Status 0 from getkey Option
+04:41:47:85000 Status 0 from setvar
+04:41:47:85000 Status 0 from setstr $TEMP1
+04:41:47:85000 Status 0 from getkey RemoteServiceDesc
+04:41:47:85000 Status 0 from mediaexist Remote Service
+Goto to label: LOAD_OPTION
+04:41:47:85000 Status 0 from goto LOAD_OPTION
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/cse/install.cmd
+Installing Connected Services Embedded
+04:41:51:492000 Status 0 from echo
+04:41:51:492000 Status 0 from add_eventlog_domain
+04:41:51:798000 Status 0 from register 
+04:41:52:239000 Status 0 from register 
+04:41:52:448000 Status 0 from register 
+04:41:52:630000 Status 0 from invoke2 cfg_create_type_xml
+04:41:53:45000 Status 0 from register 
+04:41:53:360000 Status 0 from register 
+04:41:53:554000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/cse/sio_cse_nondeletable.cfg
+Goto to label: VC_SKIP_RSE
+04:41:53:554000 Status 0 from ifvc VC_SKIP_RSE
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/cse/install.cmd
+Goto to label: CONFIG_NEXT
+04:41:53:554000 Status 0 from selectmedia SIO
+04:41:53:554000 Status 0 from addvar
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/instopt.cmd
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/instopt.cmd
+04:41:53:554000 Status 0 from getkey Option
+04:41:53:554000 Status 0 from setvar
+04:41:53:554000 Status 0 from setstr $TEMP1
+04:41:53:554000 Status 0 from getkey CSGatewayDesc
+04:41:53:554000 Status 0 from mediaexist Connected Services Gateway
+Goto to label: LOAD_OPTION
+04:41:53:554000 Status 0 from goto LOAD_OPTION
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/csgw/install.cmd
+04:41:55:31000 Status 0 from invoke2 cfg_create_type_xml
+04:41:55:301000 Status 0 from register 
+04:41:55:544000 Status 0 from register 
+04:41:55:688000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/csgw/sio_csgw_nondeletable.cfg
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/csgw/install.cmd
+Goto to label: CONFIG_NEXT
+04:41:55:688000 Status 0 from selectmedia SIO
+04:41:55:688000 Status 0 from addvar
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/instopt.cmd
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/instopt.cmd
+04:41:55:688000 Status 0 from getkey Option
+04:41:55:688000 Status 0 from setvar
+04:41:55:688000 Status 0 from setstr $TEMP1
+04:41:55:688000 Status 0 from getkey SAFETYMODULEDesc
+04:41:55:688000 Status 0 from mediaexist Safety Module
+Goto to label: LOAD_OPTION
+04:41:55:688000 Status 0 from goto LOAD_OPTION
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/install.cmd
+Installing Safety Controller
+04:42:05:134000 Status 0 from echo
+04:42:05:134000 Status 0 from setenv
+04:42:05:134000 Status 0 from mkdir C:/Users/Youss/OneDrive/Desktop/Università/Design/ROBOT STUDIO/Prep esame/Prova_1/Virtual Controllers/CRB15000_5_95/internal/OPTIONS/SC/SCDMP
+Goto to label: ADD_VC_DIR
+04:42:05:134000 Status 0 from ifvc ADD_VC_DIR
+04:42:05:134000 Status 0 from mkdir C:/Users/Youss/OneDrive/Desktop/Università/Design/ROBOT STUDIO/Prep esame/Prova_1/Virtual Controllers/CRB15000_5_95/internal/SC_DISK
+04:42:05:764000 Status 0 from copy C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/scimageversion
+Goto to label: NEXT_STEP
+04:42:05:764000 Status 0 from fileexist C:/Users/Youss/OneDrive/Desktop/Università/Design/ROBOT STUDIO/Prep esame/Prova_1/Virtual Controllers/CRB15000_5_95/internal/OPTIONS/sc/SC_ROB_1.XML
+04:42:05:764000 Status 0 from fileexist C:/Users/Youss/OneDrive/Desktop/Università/Design/ROBOT STUDIO/Prep esame/Prova_1/Virtual Controllers/CRB15000_5_95/internal/OPTIONS/sc/SC_ROB_2.XML
+04:42:05:764000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/SC_ROB_2.XML
+Goto to label: NEXT_STEP
+04:42:05:764000 Status 0 from goto NEXT_STEP
+04:42:05:764000 Status 0 from fileexist C:/Users/Youss/OneDrive/Desktop/Università/Design/ROBOT STUDIO/Prep esame/Prova_1/Virtual Controllers/CRB15000_5_95/internal/OPTIONS/sc/SC_ROB_3.XML
+04:42:05:764000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/SC_ROB_3.XML
+Goto to label: NEXT_STEP
+04:42:05:764000 Status 0 from goto NEXT_STEP
+04:42:05:764000 Status 0 from fileexist C:/Users/Youss/OneDrive/Desktop/Università/Design/ROBOT STUDIO/Prep esame/Prova_1/Virtual Controllers/CRB15000_5_95/internal/OPTIONS/sc/SC_ROB_4.XML
+04:42:05:764000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/SC_ROB_4.XML
+Goto to label: NEXT_STEP
+04:42:05:764000 Status 0 from goto NEXT_STEP
+04:42:05:829000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/BAR_SYS_1.cfg
+Goto to label: INSTALL_SCINC_FILE
+04:42:10:415000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/install_scinc.cmd
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/install_scinc.cmd
+Installing Safety Controller Feedback INC Driver
+04:42:10:415000 Status 0 from echo
+04:42:10:576000 Status 0 from invoke2 cfg_create_type_xml
+04:42:10:576000 Status 0 from if_feature_present abb.robotics.controller.safemove.essential
+04:42:10:779000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/ScInc_opt_standard.cfg
+Goto to label: END_CFG
+04:42:10:779000 Status 0 from goto END_CFG
+04:42:11:151000 Status 0 from append C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/ScInc_opt.cmd
+...done
+04:42:11:151000 Status 0 from echo
+Goto to label: END
+04:42:11:151000 Status 0 from goto END
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/install_scinc.cmd
+04:42:11:151000 Status 0 from include END
+Goto to label: INSTALL_INTBUS_FILE
+04:42:12:831000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/install_int_bus.cmd
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/install_int_bus.cmd
+Installing IntBus
+04:42:12:831000 Status 0 from echo
+04:42:12:950000 Status 0 from invoke2 cfg_create_type_xml
+04:42:13:110000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/int_bus_network.cfg
+...done
+04:42:13:110000 Status 0 from echo
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/install_int_bus.cmd
+04:42:13:110000 Status 0 from include ...done
+04:42:13:113000 Status 0 from append C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/scopt.cmd
+04:42:13:113000 Status 0 from invoke2 scorch_config_reset_cfg
+04:42:13:113000 Status 0 from fileexist C:/Users/Youss/OneDrive/Desktop/Università/Design/ROBOT STUDIO/Prep esame/Prova_1/Virtual Controllers/CRB15000_5_95/internal/OPTIONS/sc/sc_cfg.xml
+04:42:55:789000 Status 0 from invoke2 scorch_config_create_cfg_file
+04:42:56:222000 Status 0 from invoke2 scorch_eio_generate_configuration
+04:42:56:222000 Status 0 from fileexist C:/Users/Youss/OneDrive/Desktop/Università/Design/ROBOT STUDIO/Prep esame/Prova_1/Virtual Controllers/CRB15000_5_95/internal/OPTIONS/sc/sc_cfg_list.xml
+Goto to label: NEXT_STEP
+04:42:56:222000 Status 0 from goto NEXT_STEP
+Goto to label: NEXT_STEP
+04:42:56:222000 Status 0 from fileexist C:/Users/Youss/OneDrive/Desktop/Università/Design/ROBOT STUDIO/Prep esame/Prova_1/Virtual Controllers/CRB15000_5_95/internal/OPTIONS/sc/sc_eio.cfg
+04:42:56:222000 Status 0 from config C:/Users/Youss/OneDrive/Desktop/Università/Design/ROBOT STUDIO/Prep esame/Prova_1/Virtual Controllers/CRB15000_5_95/internal/OPTIONS/sc/sc_eio.cfg
+Goto to label: INSTALL_MODULAR_SAFETY_LOCALIO_CFG
+04:42:56:492000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/sc_local_io.cfg
+04:42:56:492000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/sc_local_io.cfg
+Goto to label: INSTALL_MODULAR_SAFETY_EIO_CFG
+04:42:56:584000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/saf_eio.cfg
+04:42:56:584000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/saf_eio.cfg
+Goto to label: INSTALL_DRIVE_EIO_CFG
+04:42:56:817000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/drv_eio.cfg
+04:42:56:817000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/drv_eio.cfg
+Goto to label: NO_SOFTSAFE
+04:42:56:817000 Status 0 from is_option_present SOSAF
+04:42:57:118000 Status 0 from register 
+04:42:58:88000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/runchn.cfg
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/instlang.cmd
+04:42:58:88000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/language/install.cmd
+Goto to label: INSTALL_FILE
+04:42:59:446000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/language/en/runchn_cfgtext.xml
+04:42:59:548000 Status 0 from register 
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/language/install.cmd
+04:42:59:548000 Status 0 from include INSTALL_FILE
+04:42:59:548000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/language/install.cmd
+04:42:59:548000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/language/cs/runchn_cfgtext.xml
+Goto to label: END
+04:42:59:548000 Status 0 from goto END
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/language/install.cmd
+04:42:59:548000 Status 0 from include END
+04:42:59:548000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/language/install.cmd
+04:42:59:548000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/language/da/runchn_cfgtext.xml
+Goto to label: END
+04:42:59:548000 Status 0 from goto END
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/language/install.cmd
+04:42:59:548000 Status 0 from include END
+04:42:59:548000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/language/install.cmd
+04:42:59:548000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/language/de/runchn_cfgtext.xml
+Goto to label: END
+04:42:59:548000 Status 0 from goto END
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/language/install.cmd
+04:42:59:548000 Status 0 from include END
+04:42:59:548000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/language/install.cmd
+04:42:59:548000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/language/es/runchn_cfgtext.xml
+Goto to label: END
+04:42:59:548000 Status 0 from goto END
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/language/install.cmd
+04:42:59:548000 Status 0 from include END
+04:42:59:548000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/language/install.cmd
+04:42:59:548000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/language/fi/runchn_cfgtext.xml
+Goto to label: END
+04:42:59:548000 Status 0 from goto END
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/language/install.cmd
+04:42:59:548000 Status 0 from include END
+04:42:59:548000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/language/install.cmd
+04:42:59:548000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/language/fr/runchn_cfgtext.xml
+Goto to label: END
+04:42:59:548000 Status 0 from goto END
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/language/install.cmd
+04:42:59:548000 Status 0 from include END
+04:42:59:548000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/language/install.cmd
+04:42:59:548000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/language/hu/runchn_cfgtext.xml
+Goto to label: END
+04:42:59:548000 Status 0 from goto END
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/language/install.cmd
+04:42:59:548000 Status 0 from include END
+04:42:59:548000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/language/install.cmd
+04:42:59:548000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/language/it/runchn_cfgtext.xml
+Goto to label: END
+04:42:59:548000 Status 0 from goto END
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/language/install.cmd
+04:42:59:548000 Status 0 from include END
+04:42:59:548000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/language/install.cmd
+04:42:59:548000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/language/ja/runchn_cfgtext.xml
+Goto to label: END
+04:42:59:548000 Status 0 from goto END
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/language/install.cmd
+04:42:59:548000 Status 0 from include END
+04:42:59:548000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/language/install.cmd
+04:42:59:548000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/language/ko/runchn_cfgtext.xml
+Goto to label: END
+04:42:59:548000 Status 0 from goto END
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/language/install.cmd
+04:42:59:548000 Status 0 from include END
+04:42:59:548000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/language/install.cmd
+04:42:59:548000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/language/nl/runchn_cfgtext.xml
+Goto to label: END
+04:42:59:548000 Status 0 from goto END
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/language/install.cmd
+04:42:59:548000 Status 0 from include END
+04:42:59:548000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/language/install.cmd
+04:42:59:548000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/language/pl/runchn_cfgtext.xml
+Goto to label: END
+04:42:59:548000 Status 0 from goto END
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/language/install.cmd
+04:42:59:548000 Status 0 from include END
+04:42:59:548000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/language/install.cmd
+04:42:59:548000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/language/pt/runchn_cfgtext.xml
+Goto to label: END
+04:42:59:548000 Status 0 from goto END
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/language/install.cmd
+04:42:59:548000 Status 0 from include END
+04:42:59:548000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/language/install.cmd
+04:42:59:548000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/language/ro/runchn_cfgtext.xml
+Goto to label: END
+04:42:59:548000 Status 0 from goto END
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/language/install.cmd
+04:42:59:548000 Status 0 from include END
+04:42:59:548000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/language/install.cmd
+04:42:59:548000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/language/ru/runchn_cfgtext.xml
+Goto to label: END
+04:42:59:548000 Status 0 from goto END
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/language/install.cmd
+04:42:59:548000 Status 0 from include END
+04:42:59:548000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/language/install.cmd
+04:42:59:548000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/language/sl/runchn_cfgtext.xml
+Goto to label: END
+04:42:59:548000 Status 0 from goto END
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/language/install.cmd
+04:42:59:548000 Status 0 from include END
+04:42:59:548000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/language/install.cmd
+04:42:59:548000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/language/sv/runchn_cfgtext.xml
+Goto to label: END
+04:42:59:548000 Status 0 from goto END
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/language/install.cmd
+04:42:59:548000 Status 0 from include END
+04:42:59:548000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/language/install.cmd
+04:42:59:548000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/language/tr/runchn_cfgtext.xml
+Goto to label: END
+04:42:59:548000 Status 0 from goto END
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/language/install.cmd
+04:42:59:548000 Status 0 from include END
+04:42:59:548000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/language/install.cmd
+04:42:59:548000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/language/zh/runchn_cfgtext.xml
+Goto to label: END
+04:42:59:548000 Status 0 from goto END
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/language/install.cmd
+04:42:59:548000 Status 0 from include END
+04:42:59:548000 Status 0 from setstr $LANG
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/instlang.cmd
+04:42:59:548000 Status 0 from include $LANG
+Goto to label: END
+04:42:59:548000 Status 0 from goto END
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sc/install.cmd
+Goto to label: CONFIG_NEXT
+04:42:59:548000 Status 0 from selectmedia 
+04:42:59:548000 Status 0 from addvar
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/instopt.cmd
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/instopt.cmd
+04:42:59:548000 Status 0 from getkey Option
+04:42:59:548000 Status 0 from setvar
+04:42:59:548000 Status 0 from setstr $TEMP1
+04:42:59:548000 Status 0 from getkey LeadthroughDesc
+04:42:59:548000 Status 0 from mediaexist Leadthrough
+Goto to label: LOAD_OPTION
+04:42:59:548000 Status 0 from goto LOAD_OPTION
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/lt/install.cmd
+Installing Lead Through
+04:42:59:548000 Status 0 from echo
+04:42:59:706000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/lt/leadthrough_sys.cfg
+04:42:59:917000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/lt/leadthrough_mmc.cfg
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/lt/install.cmd
+Goto to label: CONFIG_NEXT
+04:42:59:917000 Status 0 from selectmedia MMC
+04:42:59:917000 Status 0 from addvar
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/instopt.cmd
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/instopt.cmd
+04:42:59:917000 Status 0 from getkey Option
+04:42:59:917000 Status 0 from setvar
+04:42:59:917000 Status 0 from setstr $TEMP1
+04:42:59:917000 Status 0 from getkey SAFEMOVEPRODesc
+04:42:59:917000 Status 0 from mediaexist 3043-3 SafeMove Collaborative
+Goto to label: LOAD_OPTION
+04:42:59:917000 Status 0 from goto LOAD_OPTION
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/safemove/install.cmd
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/safemove/install.cmd
+Goto to label: CONFIG_NEXT
+04:43:00:537000 Status 0 from selectmedia $ANSWER
+04:43:00:537000 Status 0 from addvar
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/instopt.cmd
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/instopt.cmd
+04:43:00:537000 Status 0 from getkey Option
+04:43:00:537000 Status 0 from setvar
+04:43:00:537000 Status 0 from setstr $TEMP1
+04:43:00:537000 Status 0 from getkey MOTCOMDesc
+04:43:00:537000 Status 0 from mediaexist Motor Commutation
+Goto to label: LOAD_OPTION
+04:43:00:537000 Status 0 from goto LOAD_OPTION
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/motcom/install.cmd
+04:43:02:103000 Status 0 from if END_LABEL
+Installing Motor Commutation Service Routine...
+04:43:02:103000 Status 0 from echo
+04:43:02:371000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/motcom/motcom_sys.cfg
+04:43:02:669000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/motcom/motcom_mmc.cfg
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/instlang.cmd
+04:43:02:669000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/motcom/language/install.cmd
+Goto to label: INSTALL_FILE
+04:43:03:863000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/motcom/language/en/motcomop.xml
+04:43:03:863000 Status 0 from text C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/motcom/language/en/motcomop.xml
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/motcom/language/install.cmd
+04:43:03:863000 Status 0 from include INSTALL_FILE
+04:43:03:863000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/motcom/language/install.cmd
+04:43:03:863000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/motcom/language/cs/motcomop.xml
+Goto to label: END
+04:43:03:863000 Status 0 from goto END
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/motcom/language/install.cmd
+04:43:03:863000 Status 0 from include END
+04:43:03:863000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/motcom/language/install.cmd
+04:43:03:863000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/motcom/language/da/motcomop.xml
+Goto to label: END
+04:43:03:863000 Status 0 from goto END
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/motcom/language/install.cmd
+04:43:03:863000 Status 0 from include END
+04:43:03:863000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/motcom/language/install.cmd
+04:43:03:863000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/motcom/language/de/motcomop.xml
+Goto to label: END
+04:43:03:863000 Status 0 from goto END
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/motcom/language/install.cmd
+04:43:03:863000 Status 0 from include END
+04:43:03:863000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/motcom/language/install.cmd
+04:43:03:863000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/motcom/language/es/motcomop.xml
+Goto to label: END
+04:43:03:863000 Status 0 from goto END
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/motcom/language/install.cmd
+04:43:03:863000 Status 0 from include END
+04:43:03:863000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/motcom/language/install.cmd
+04:43:03:863000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/motcom/language/fi/motcomop.xml
+Goto to label: END
+04:43:03:863000 Status 0 from goto END
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/motcom/language/install.cmd
+04:43:03:863000 Status 0 from include END
+04:43:03:863000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/motcom/language/install.cmd
+04:43:03:863000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/motcom/language/fr/motcomop.xml
+Goto to label: END
+04:43:03:863000 Status 0 from goto END
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/motcom/language/install.cmd
+04:43:03:863000 Status 0 from include END
+04:43:03:863000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/motcom/language/install.cmd
+04:43:03:863000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/motcom/language/hu/motcomop.xml
+Goto to label: END
+04:43:03:863000 Status 0 from goto END
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/motcom/language/install.cmd
+04:43:03:863000 Status 0 from include END
+04:43:03:863000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/motcom/language/install.cmd
+04:43:03:863000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/motcom/language/it/motcomop.xml
+Goto to label: END
+04:43:03:863000 Status 0 from goto END
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/motcom/language/install.cmd
+04:43:03:863000 Status 0 from include END
+04:43:03:863000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/motcom/language/install.cmd
+04:43:03:863000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/motcom/language/ja/motcomop.xml
+Goto to label: END
+04:43:03:863000 Status 0 from goto END
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/motcom/language/install.cmd
+04:43:03:863000 Status 0 from include END
+04:43:03:863000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/motcom/language/install.cmd
+04:43:03:863000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/motcom/language/ko/motcomop.xml
+Goto to label: END
+04:43:03:863000 Status 0 from goto END
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/motcom/language/install.cmd
+04:43:03:863000 Status 0 from include END
+04:43:03:863000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/motcom/language/install.cmd
+04:43:03:863000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/motcom/language/nl/motcomop.xml
+Goto to label: END
+04:43:03:863000 Status 0 from goto END
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/motcom/language/install.cmd
+04:43:03:863000 Status 0 from include END
+04:43:03:863000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/motcom/language/install.cmd
+04:43:03:863000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/motcom/language/pl/motcomop.xml
+Goto to label: END
+04:43:03:863000 Status 0 from goto END
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/motcom/language/install.cmd
+04:43:03:863000 Status 0 from include END
+04:43:03:863000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/motcom/language/install.cmd
+04:43:03:863000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/motcom/language/pt/motcomop.xml
+Goto to label: END
+04:43:03:863000 Status 0 from goto END
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/motcom/language/install.cmd
+04:43:03:863000 Status 0 from include END
+04:43:03:863000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/motcom/language/install.cmd
+04:43:03:863000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/motcom/language/ro/motcomop.xml
+Goto to label: END
+04:43:03:863000 Status 0 from goto END
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/motcom/language/install.cmd
+04:43:03:863000 Status 0 from include END
+04:43:03:863000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/motcom/language/install.cmd
+04:43:03:863000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/motcom/language/ru/motcomop.xml
+Goto to label: END
+04:43:03:863000 Status 0 from goto END
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/motcom/language/install.cmd
+04:43:03:863000 Status 0 from include END
+04:43:03:863000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/motcom/language/install.cmd
+04:43:03:863000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/motcom/language/sl/motcomop.xml
+Goto to label: END
+04:43:03:863000 Status 0 from goto END
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/motcom/language/install.cmd
+04:43:03:863000 Status 0 from include END
+04:43:03:863000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/motcom/language/install.cmd
+04:43:03:863000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/motcom/language/sv/motcomop.xml
+Goto to label: END
+04:43:03:863000 Status 0 from goto END
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/motcom/language/install.cmd
+04:43:03:863000 Status 0 from include END
+04:43:03:863000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/motcom/language/install.cmd
+04:43:03:863000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/motcom/language/tr/motcomop.xml
+Goto to label: END
+04:43:03:863000 Status 0 from goto END
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/motcom/language/install.cmd
+04:43:03:863000 Status 0 from include END
+04:43:03:863000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/motcom/language/install.cmd
+04:43:03:863000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/motcom/language/zh/motcomop.xml
+Goto to label: END
+04:43:03:863000 Status 0 from goto END
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/motcom/language/install.cmd
+04:43:03:863000 Status 0 from include END
+04:43:03:863000 Status 0 from setstr $LANG
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/instlang.cmd
+04:43:03:863000 Status 0 from include $LANG
+...Motor Commutation installation finished
+04:43:03:863000 Status 0 from echo
+04:43:03:863000 Status 0 from setvar
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/motcom/install.cmd
+Goto to label: CONFIG_NEXT
+04:43:03:863000 Status 0 from selectmedia MMC
+04:43:03:863000 Status 0 from addvar
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/instopt.cmd
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/instopt.cmd
+04:43:03:863000 Status 0 from getkey Option
+04:43:03:863000 Status 0 from setvar
+04:43:03:863000 Status 0 from setstr $TEMP1
+04:43:03:863000 Status 0 from getkey SISDesc
+04:43:03:863000 Status 0 from mediaexist Service Info System
+Goto to label: LOAD_OPTION
+04:43:03:863000 Status 0 from goto LOAD_OPTION
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/install.cmd
+04:43:05:721000 Status 0 from if END_LABEL
+Installing Service Information System
+04:43:05:721000 Status 0 from echo
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/instlang.cmd
+04:43:05:721000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/install.cmd
+Goto to label: INSTALL_FILE
+04:43:06:564000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/en/sis_txt.xml
+04:43:06:564000 Status 0 from text C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/en/sis_txt.xml
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/install.cmd
+04:43:06:564000 Status 0 from include INSTALL_FILE
+04:43:06:564000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/install.cmd
+Goto to label: INSTALL_FILE
+04:43:06:778000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/cs/sis_txt.xml
+04:43:06:778000 Status 0 from text C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/cs/sis_txt.xml
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/install.cmd
+04:43:06:778000 Status 0 from include INSTALL_FILE
+04:43:06:778000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/install.cmd
+Goto to label: INSTALL_FILE
+04:43:06:999000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/da/sis_txt.xml
+04:43:06:999000 Status 0 from text C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/da/sis_txt.xml
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/install.cmd
+04:43:06:999000 Status 0 from include INSTALL_FILE
+04:43:06:999000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/install.cmd
+Goto to label: INSTALL_FILE
+04:43:07:195000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/de/sis_txt.xml
+04:43:07:195000 Status 0 from text C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/de/sis_txt.xml
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/install.cmd
+04:43:07:195000 Status 0 from include INSTALL_FILE
+04:43:07:195000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/install.cmd
+Goto to label: INSTALL_FILE
+04:43:07:378000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/es/sis_txt.xml
+04:43:07:378000 Status 0 from text C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/es/sis_txt.xml
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/install.cmd
+04:43:07:378000 Status 0 from include INSTALL_FILE
+04:43:07:378000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/install.cmd
+Goto to label: INSTALL_FILE
+04:43:07:528000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/fi/sis_txt.xml
+04:43:07:528000 Status 0 from text C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/fi/sis_txt.xml
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/install.cmd
+04:43:07:528000 Status 0 from include INSTALL_FILE
+04:43:07:528000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/install.cmd
+Goto to label: INSTALL_FILE
+04:43:07:722000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/fr/sis_txt.xml
+04:43:07:722000 Status 0 from text C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/fr/sis_txt.xml
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/install.cmd
+04:43:07:722000 Status 0 from include INSTALL_FILE
+04:43:07:722000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/install.cmd
+Goto to label: INSTALL_FILE
+04:43:07:908000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/hu/sis_txt.xml
+04:43:07:908000 Status 0 from text C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/hu/sis_txt.xml
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/install.cmd
+04:43:07:908000 Status 0 from include INSTALL_FILE
+04:43:07:908000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/install.cmd
+Goto to label: INSTALL_FILE
+04:43:08:99000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/it/sis_txt.xml
+04:43:08:99000 Status 0 from text C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/it/sis_txt.xml
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/install.cmd
+04:43:08:99000 Status 0 from include INSTALL_FILE
+04:43:08:99000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/install.cmd
+Goto to label: INSTALL_FILE
+04:43:08:214000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/ja/sis_txt.xml
+04:43:08:214000 Status 0 from text C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/ja/sis_txt.xml
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/install.cmd
+04:43:08:214000 Status 0 from include INSTALL_FILE
+04:43:08:214000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/install.cmd
+Goto to label: INSTALL_FILE
+04:43:08:369000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/ko/sis_txt.xml
+04:43:08:369000 Status 0 from text C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/ko/sis_txt.xml
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/install.cmd
+04:43:08:369000 Status 0 from include INSTALL_FILE
+04:43:08:369000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/install.cmd
+Goto to label: INSTALL_FILE
+04:43:08:588000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/nl/sis_txt.xml
+04:43:08:588000 Status 0 from text C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/nl/sis_txt.xml
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/install.cmd
+04:43:08:588000 Status 0 from include INSTALL_FILE
+04:43:08:588000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/install.cmd
+Goto to label: INSTALL_FILE
+04:43:08:853000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/pl/sis_txt.xml
+04:43:08:853000 Status 0 from text C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/pl/sis_txt.xml
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/install.cmd
+04:43:08:853000 Status 0 from include INSTALL_FILE
+04:43:08:853000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/install.cmd
+Goto to label: INSTALL_FILE
+04:43:08:992000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/pt/sis_txt.xml
+04:43:08:992000 Status 0 from text C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/pt/sis_txt.xml
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/install.cmd
+04:43:08:992000 Status 0 from include INSTALL_FILE
+04:43:08:992000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/install.cmd
+Goto to label: INSTALL_FILE
+04:43:09:126000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/ro/sis_txt.xml
+04:43:09:126000 Status 0 from text C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/ro/sis_txt.xml
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/install.cmd
+04:43:09:126000 Status 0 from include INSTALL_FILE
+04:43:09:126000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/install.cmd
+Goto to label: INSTALL_FILE
+04:43:09:344000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/ru/sis_txt.xml
+04:43:09:344000 Status 0 from text C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/ru/sis_txt.xml
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/install.cmd
+04:43:09:344000 Status 0 from include INSTALL_FILE
+04:43:09:344000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/install.cmd
+Goto to label: INSTALL_FILE
+04:43:09:411000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/sl/sis_txt.xml
+04:43:09:411000 Status 0 from text C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/sl/sis_txt.xml
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/install.cmd
+04:43:09:411000 Status 0 from include INSTALL_FILE
+04:43:09:411000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/install.cmd
+Goto to label: INSTALL_FILE
+04:43:09:632000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/sv/sis_txt.xml
+04:43:09:632000 Status 0 from text C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/sv/sis_txt.xml
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/install.cmd
+04:43:09:632000 Status 0 from include INSTALL_FILE
+04:43:09:632000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/install.cmd
+Goto to label: INSTALL_FILE
+04:43:09:784000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/tr/sis_txt.xml
+04:43:09:784000 Status 0 from text C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/tr/sis_txt.xml
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/install.cmd
+04:43:09:784000 Status 0 from include INSTALL_FILE
+04:43:09:784000 Status 0 from setstr $LANG
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/install.cmd
+Goto to label: INSTALL_FILE
+04:43:09:898000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/zh/sis_txt.xml
+04:43:09:898000 Status 0 from text C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/zh/sis_txt.xml
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/language/install.cmd
+04:43:09:898000 Status 0 from include INSTALL_FILE
+04:43:09:898000 Status 0 from setstr $LANG
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/instlang.cmd
+04:43:09:898000 Status 0 from include $LANG
+04:43:10:69000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/sissys.cfg
+04:43:10:401000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/sismmc.cfg
+04:43:10:401000 Status 0 from setvar
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/options/sis/install.cmd
+Goto to label: CONFIG_NEXT
+04:43:10:401000 Status 0 from selectmedia MMC
+04:43:10:401000 Status 0 from addvar
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/instopt.cmd
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/instopt.cmd
+Goto to label: END_OF_LOOP
+04:43:10:401000 Status 0 from getkey Option
+04:43:10:401000 Status 0 from setvar
+Goto to label: END_OF_FILE
+04:43:10:401000 Status 0 from goto END_OF_FILE
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/instopt.cmd
+04:43:10:401000 Status 0 from loop END_OF_FILE
+04:43:10:401000 Status 0 from setstr $ANSWER
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/Robots_1.8.0/install.cmd
+Goto to label: INSTALL_OPTIONS
+04:43:10:401000 Status 0 from if INSTALL_OPTIONS
+Goto to label: LOAD_CMD
+04:43:11:461000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/Robots_1.8.0/options/install.cmd
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/Robots_1.8.0/options/install.cmd
+Installing robot options
+04:43:11:461000 Status 0 from echo
+04:43:11:461000 Status 0 from getkey OPTCRB
+Goto to label: LOAD_CMD
+04:43:21:449000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/Robots_1.8.0/options/crb/install.cmd
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/Robots_1.8.0/options/crb/install.cmd
+Installing CRB option
+04:43:21:449000 Status 0 from echo
+04:43:21:449000 Status 0 from setvar
+04:43:21:449000 Status 0 from getkey Irb1Desc
+Installing CRB 15000-5/0.95
+04:43:21:449000 Status 0 from echo
+04:43:21:449000 Status 0 from getkey Irb1Select
+Goto to label: CRB15000_0_95_5
+04:43:21:449000 Status 0 from goto CRB15000_0_95_5
+Installing standard IO for GOFA
+04:43:21:449000 Status 0 from echo
+04:43:21:449000 Status 0 from if_feature_present abb.robotics.controller.axiscomputer.none
+Goto to label: NO_ASI
+04:43:21:449000 Status 0 from goto NO_ASI
+04:43:22:66000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/Robots_1.8.0/options/crb/config/EIO/GOFA_EIO_Internal.cfg
+Goto to label: END_LABEL
+04:43:22:66000 Status 0 from goto END_LABEL
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/Robots_1.8.0/options/crb/install.cmd
+04:43:22:66000 Status 0 from include END_LABEL
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/Robots_1.8.0/options/install.cmd
+04:43:22:66000 Status 0 from include END_LABEL
+Goto to label: END_LABEL
+04:43:22:66000 Status 0 from goto END_LABEL
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/Robots_1.8.0/install.cmd
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/Wizard_1.4.1/install.cmd
+Installing WIZARD Add-In
+04:43:31:952000 Status 0 from echo
+04:43:31:952000 Status 0 from getkey WIZARD
+04:43:31:952000 Status 0 from getkey Irb1Media
+04:43:31:952000 Status 0 from ifstr 14050_ROB1
+04:43:31:952000 Status 0 from ifstr KnownRobotType
+04:43:31:952000 Status 0 from ifstr KnownRobotType
+Goto to label: KnownRobotType
+04:43:31:952000 Status 0 from ifstr KnownRobotType
+04:43:31:952000 Status 0 from setenv
+04:43:31:984000 Status 0 from register $PRODUCTS/Wizard_1.4.1
+04:43:31:984000 Status 0 from direxist C:/Users/Youss/OneDrive/Desktop/Università/Design/ROBOT STUDIO/Prep esame/Prova_1/Virtual Controllers/CRB15000_5_95/HOME/Wizard
+04:43:31:984000 Status 0 from mkdir C:/Users/Youss/OneDrive/Desktop/Università/Design/ROBOT STUDIO/Prep esame/Prova_1/Virtual Controllers/CRB15000_5_95/HOME/Wizard
+04:43:33:268000 Status 0 from copy C:/Users/Youss/AppData/Local/ABB/RobotWare/Wizard_1.4.1/Wizard/Wizard.pgf
+04:43:33:572000 Status 0 from copy C:/Users/Youss/AppData/Local/ABB/RobotWare/Wizard_1.4.1/Wizard/Wizard.mod
+04:43:34:21000 Status 0 from copy C:/Users/Youss/AppData/Local/ABB/RobotWare/Wizard_1.4.1/Wizard/Wizard_Params/15000_ROB1/Wizard_Params.sys
+04:43:34:160000 Status 0 from copy C:/Users/Youss/AppData/Local/ABB/RobotWare/Wizard_1.4.1/Wizard/Wizard_LoadData.modx
+04:43:34:400000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/Wizard_1.4.1/Config/Wizard_SYS_EXT.cfg
+04:43:34:663000 Status 0 from config C:/Users/Youss/AppData/Local/ABB/RobotWare/Wizard_1.4.1/Config/Gripper_Common/Wizard_SYS.cfg
+Goto to label: END_LABEL
+04:43:34:663000 Status 0 from getkey OPTFCTRL
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/Wizard_1.4.1/install.cmd
+04:43:34:663000 Status 0 from selectmedia OPTFCTRL
+Goto to label: LOAD_CMD
+04:43:35:838000 Status 0 from fileexist C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/instirbopt.cmd
+
+Script begin: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/instirbopt.cmd
+04:43:35:838000 Status 0 from fileexist C:/Users/Youss/OneDrive/Desktop/Università/Design/ROBOT STUDIO/Prep esame/Prova_1/Virtual Controllers/CRB15000_5_95/DATA/EXT_MOC.cfg
+Goto to label: END_LABEL
+04:43:35:838000 Status 0 from goto END_LABEL
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/system/instirbopt.cmd
+04:43:35:838000 Status 0 from include END_LABEL
+04:43:35:838000 Status 0 from fileexist C:/Users/Youss/OneDrive/Desktop/Università/Design/ROBOT STUDIO/Prep esame/Prova_1/Virtual Controllers/CRB15000_5_95/internal/OPTIONS/SC/sc_cfg_list.xml
+Goto to label: SKIP_SC_CFG_LIST
+04:43:35:838000 Status 0 from goto SKIP_SC_CFG_LIST
+Simulated moc_io.
+04:43:35:914000 Status 0 from new motion
+moc_startup_done is false 0
+moc_startup_done is false 500
+04:43:36:914000 Status 0 from new rapid
+04:43:36:914000 Status 0 from new cab
+04:43:36:914000 Status 0 from invoke2 eio_system_set_cfg_output_format
+04:43:36:914000 Status 0 from setEioValidationLevel
+04:43:42:914000 Status 0 from delay
+System installation finished
+04:43:42:914000 Status 0 from echo
+restarting the controller ...
+
+24-08-20  22:23:41 MC0: type = STATE_CHANGE id = Operational code = 56 (10056)
+
+04:43:42:914000 Status 0 from restart
+Goto to label: NO_ERROR
+04:43:42:914000 Status 0 from goto NO_ERROR
+Script execution is stopped because of power-fail!
+Script end: C:/Users/Youss/AppData/Local/ABB/RobotWare/RobotControl_7.8.0/install.cmd
