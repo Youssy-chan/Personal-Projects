@@ -1,0 +1,57 @@
+[
+  {
+    "name": "Alessia Bianchi",
+    "phone": "+39 333 842 7712",
+    "email": "alessia.bianchi@email.com"
+  },
+  {
+    "name": "Andrea Conti",
+    "phone": "+39 340 221 5588",
+    "email": "andrea.conti@company.it"
+  },
+  {
+    "name": "Chiara De Luca",
+    "phone": "+39 347 905 1144",
+    "email": "chiara.deluca@mail.it"
+  },
+  {
+    "name": "Davide Esposito",
+    "phone": "+39 320 718 9901",
+    "email": "davide.esposito@work.it"
+  },
+  {
+    "name": "Elena Ferri",
+    "phone": "+39 335 664 0210",
+    "email": "elena.ferri@email.com"
+  },
+  {
+    "name": "Federico Galli",
+    "phone": "+39 392 445 3388",
+    "email": "federico.galli@mail.it"
+  },
+  {
+    "name": "Francesca Greco",
+    "phone": "+39 331 775 9023",
+    "email": "francesca.greco@studio.it"
+  },
+  {
+    "name": "Giorgio Leone",
+    "phone": "+39 338 210 6645",
+    "email": "giorgio.leone@email.com"
+  },
+  {
+    "name": "Giulia Mancini",
+    "phone": "+39 339 112 4577",
+    "email": "giulia.mancini@mail.it"
+  },
+  {
+    "name": "Luca Marchetti",
+    "phone": "+39 345 980 3312",
+    "email": "luca.marchetti@azienda.it"
+  },
+  {
+    "name": "Marco Neri",
+    "phone": "+39 336 550 7841",
+    "email": "marco.neri@email.com"
+  }
+]

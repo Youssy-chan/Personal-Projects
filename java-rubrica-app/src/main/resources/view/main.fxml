@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21.0.4" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="it.unimore.rubrica.controller.MainController"
+            prefWidth="900" prefHeight="560"
+            stylesheets="@/app.css">
+
+    <!-- HEADER -->
+    <top>
+        <VBox spacing="0">
+            <!-- Riga header con titolo + contatore -->
+            <HBox spacing="12" alignment="CENTER_LEFT" styleClass="header">
+                <Label text="📇" styleClass="header-icon"/>
+                <Label text="La mia Rubrica" styleClass="title"/>
+                <Region HBox.hgrow="ALWAYS"/>
+                <Label fx:id="statsLabel" text="0 contatti" styleClass="stats-label"/>
+            </HBox>
+
+            <!-- TOOLBAR -->
+            <HBox spacing="8" alignment="CENTER_LEFT" styleClass="toolbar">
+                <Button fx:id="btnNew" text="＋ Nuovo contatto" onAction="#onAdd" styleClass="primary"/>
+                <Button fx:id="btnDelete" text="🗑 Elimina" onAction="#onDelete" styleClass="ghost"/>
+                <Button fx:id="btnSelectAll" onAction="#onSelectAll" styleClass="ghost icon-btn">
+                    <graphic>
+                        <Label text="✔️"/>
+                    </graphic>
+                </Button>
+
+                <Region styleClass="separator"/>
+
+                <!-- Campo di ricerca -->
+                <HBox alignment="CENTER_LEFT" spacing="8" styleClass="search-box" HBox.hgrow="ALWAYS">
+                    <Label text="🔍" styleClass="search-icon"/>
+                    <TextField fx:id="searchField" promptText="Cerca per nome, telefono o email..." HBox.hgrow="ALWAYS"/>
+                </HBox>
+
+                <Region styleClass="separator"/>
+
+                <Button fx:id="btnImport" text="↓ Importa CSV" onAction="#onImportCsv" styleClass="ghost"/>
+                <Button fx:id="btnExport" text="↑ Esporta CSV" onAction="#onExportCsv" styleClass="ghost"/>
+            </HBox>
+        </VBox>
+    </top>
+
+    <!-- TABELLA -->
+    <center>
+        <StackPane>
+            <padding>
+                <Insets top="16" right="16" bottom="16" left="16"/>
+            </padding>
+
+            <TableView fx:id="table" VBox.vgrow="ALWAYS" prefHeight="400">
+                <columns>
+                    <TableColumn fx:id="colName"  text="Nome"     prefWidth="260"/>
+                    <TableColumn fx:id="colPhone" text="Telefono" prefWidth="180"/>
+                    <TableColumn fx:id="colEmail" text="Email"    prefWidth="260"/>
+                </columns>
+                <placeholder>
+                    <Label text="Nessun contatto nella tabella" styleClass="muted"/>
+                </placeholder>
+            </TableView>
+        </StackPane>
+    </center>
+
+
+    <!-- FOOTER -->
+    <bottom>
+        <HBox spacing="8" alignment="CENTER_LEFT" styleClass="footer">
+            <Label text="Rubrica – JavaFX" styleClass="footer-title"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Label fx:id="statusLabel" text="Progetto" styleClass="footer-status"/>
+        </HBox>
+    </bottom>
+</BorderPane>
