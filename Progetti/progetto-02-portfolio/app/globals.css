@@ -1,0 +1,176 @@
+@import "tailwindcss";
+
+/* ── Custom CSS variables (design system "Lumina Tech Portfolio" da Stitch) ── */
+:root {
+  --color-primary: #6366f1;
+  --color-secondary: #8b5cf6;
+  --color-bg: #0f172a;
+  --color-surface: #1d2022;
+  --color-border: #334155;
+  --color-text: #f8fafc;
+  --color-muted: #94a3b8;
+
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-display: var(--font-geist-sans), system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), monospace;
+}
+
+/* ── Base ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  background-color: #0f172a;
+  color: #f8fafc;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ── Gradient text ── */
+.gradient-text {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Glassmorphism card ── */
+.glass {
+  background: rgba(30, 27, 75, 0.4);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(99, 102, 241, 0.15);
+}
+
+/* ── Glow effect ── */
+.glow {
+  box-shadow: 0 0 40px rgba(99, 102, 241, 0.12);
+}
+
+/* ── Hero orb background ── */
+.hero-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+/* ── Tech badge pill ── */
+.tech-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.2rem 0.65rem;
+  background: rgba(139, 92, 246, 0.12);
+  border: 1px solid rgba(139, 92, 246, 0.25);
+  border-radius: 9999px;
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: #a78bfa;
+  white-space: nowrap;
+  font-family: var(--font-display);
+  letter-spacing: 0.03em;
+}
+
+/* ── Status badge ── */
+.status-completato {
+  color: #34d399;
+  background: rgba(52, 211, 153, 0.1);
+  border: 1px solid rgba(52, 211, 153, 0.25);
+}
+.status-wip {
+  color: #fbbf24;
+  background: rgba(251, 191, 36, 0.1);
+  border: 1px solid rgba(251, 191, 36, 0.25);
+}
+.status-pianificato {
+  color: #94a3b8;
+  background: rgba(148, 163, 184, 0.08);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #0f172a; }
+::-webkit-scrollbar-thumb { background: #334155; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #6366f1; }
+
+/* ── Selection ── */
+::selection {
+  background: rgba(99, 102, 241, 0.3);
+  color: #f8fafc;
+}
+
+/* ── Focus ring ── */
+:focus-visible {
+  outline: 2px solid #6366f1;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ── Section spacing ── */
+.section-gap {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+
+/* ── Code block ── */
+.prose pre {
+  background: #1d2022;
+  border: 1px solid #334155;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  overflow-x: auto;
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  line-height: 1.7;
+}
+
+.prose code {
+  font-family: var(--font-mono);
+  background: rgba(99, 102, 241, 0.12);
+  color: #a78bfa;
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  font-size: 0.875em;
+}
+
+.prose pre code {
+  background: none;
+  color: #e0e3e5;
+  padding: 0;
+}
+
+.prose h2 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #f8fafc;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  border-bottom: 1px solid #334155;
+  padding-bottom: 0.5rem;
+}
+
+.prose h3 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #c0c1ff;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.prose p { color: #94a3b8; line-height: 1.8; margin-bottom: 1rem; }
+.prose ul { color: #94a3b8; padding-left: 1.5rem; margin-bottom: 1rem; }
+.prose ul li { margin-bottom: 0.4rem; list-style-type: disc; }
+.prose strong { color: #f8fafc; font-weight: 600; }

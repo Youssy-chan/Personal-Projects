@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="it" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lumino — Work Deeper. Achieve More.</title>
+  <meta name="description" content="Lumino è l'app per la produttività profonda che ti aiuta a eliminare le distrazioni, entrare nel flow e raggiungere i tuoi obiettivi. Pomodoro evoluto, analytics avanzati e integrazioni smart." />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Lumino — Work Deeper. Achieve More." />
+  <meta property="og:description" content="Elimina le distrazioni. Entra nel flow. Produci di più con Lumino, l'app per la produttività profonda." />
+  <meta property="og:image" content="assets/images/og-image.png" />
+  <meta property="og:url" content="https://lumino.app" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://lumino.app" />
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Lumino",
+    "url": "https://lumino.app",
+    "description": "App per la produttività profonda con Focus Timer, Analytics e Integrazioni smart."
+  }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <header class="navbar" id="navbar" role="banner">
+    <nav class="nav-container" aria-label="Navigazione principale">
+      <a href="#hero" class="nav-logo" aria-label="Lumino - torna all'inizio">
+        <span class="logo-icon" aria-hidden="true">⚡</span>
+        <span class="logo-text">Lumino</span>
+      </a>
+
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="#features" class="nav-link">Funzionalità</a></li>
+        <li><a href="#how-it-works" class="nav-link">Come funziona</a></li>
+        <li><a href="#testimonials" class="nav-link">Recensioni</a></li>
+        <li><a href="#pricing" class="nav-link">Prezzi</a></li>
+        <li><a href="#faq" class="nav-link">FAQ</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Attiva/disattiva dark mode" title="Cambia tema">
+          <span class="theme-icon" aria-hidden="true">🌙</span>
+        </button>
+        <a href="#contact" class="btn btn-primary nav-cta">Inizia gratis</a>
+        <button class="hamburger" id="hamburger" aria-label="Apri menu di navigazione" aria-expanded="false" aria-controls="nav-links">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="hero" aria-labelledby="hero-heading">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="hero-orb hero-orb--1"></div>
+        <div class="hero-orb hero-orb--2"></div>
+        <div class="hero-grid"></div>
+      </div>
+
+      <div class="container hero-content">
+        <div class="hero-badge animate-fade-in">
+          <span class="badge-dot" aria-hidden="true"></span>
+          Oltre 12.000 professionisti già produttivi
+        </div>
+
+        <h1 class="hero-title animate-slide-up" id="hero-heading">
+          Lavora più in profondo.<br />
+          <span class="gradient-text">Ottieni di più.</span>
+        </h1>
+
+        <p class="hero-subtitle animate-slide-up anim-delay-1">
+          Lumino trasforma le tue sessioni di lavoro con il metodo Deep Work: 
+          Focus Timer intelligente, analytics sul tuo flusso e integrazioni con 
+          gli strumenti che già usi.
+        </p>
+
+        <div class="hero-cta animate-slide-up anim-delay-2">
+          <a href="#contact" class="btn btn-primary btn-lg" id="hero-cta-primary">
+            Inizia gratis — nessuna carta
+          </a>
+          <a href="#how-it-works" class="btn btn-ghost btn-lg">
+            <span class="play-icon" aria-hidden="true">▶</span>
+            Come funziona
+          </a>
+        </div>
+
+        <div class="hero-stats animate-fade-in anim-delay-3" aria-label="Statistiche Lumino">
+          <div class="stat">
+            <span class="stat-value">2.4×</span>
+            <span class="stat-label">produttività media</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat">
+            <span class="stat-value">94%</span>
+            <span class="stat-label">utenti soddisfatti</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat">
+            <span class="stat-value">12k+</span>
+            <span class="stat-label">sessioni al giorno</span>
+          </div>
+        </div>
+
+        <!-- App mockup -->
+        <div class="hero-mockup animate-float anim-delay-2" aria-label="Anteprima interfaccia Lumino">
+          <div class="mockup-window">
+            <div class="mockup-bar" aria-hidden="true">
+              <span class="mockup-dot mockup-dot--red"></span>
+              <span class="mockup-dot mockup-dot--yellow"></span>
+              <span class="mockup-dot mockup-dot--green"></span>
+            </div>
+            <div class="mockup-body">
+              <div class="mockup-timer">
+                <div class="timer-ring" aria-hidden="true">
+                  <svg viewBox="0 0 120 120" class="timer-svg">
+                    <circle cx="60" cy="60" r="54" class="timer-track"/>
+                    <circle cx="60" cy="60" r="54" class="timer-progress" id="timer-progress-svg"/>
+                  </svg>
+                  <div class="timer-display">
+                    <span class="timer-digits">24:13</span>
+                    <span class="timer-label">Focus</span>
+                  </div>
+                </div>
+              </div>
+              <div class="mockup-stats">
+                <div class="mockup-stat-row">
+                  <span>Sessioni oggi</span>
+                  <span class="mockup-stat-val accent">4</span>
+                </div>
+                <div class="mockup-stat-row">
+                  <span>Ore focus</span>
+                  <span class="mockup-stat-val accent">3h 12m</span>
+                </div>
+                <div class="mockup-progress-bar" aria-hidden="true">
+                  <div class="mockup-progress-fill" style="width: 72%"></div>
+                </div>
+                <span class="mockup-progress-label">Obiettivo giornaliero: 72%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FEATURES ========== -->
+    <section class="features section" id="features" aria-labelledby="features-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Funzionalità</span>
+          <h2 class="section-title" id="features-heading">Tutto ciò che ti serve per il deep work</h2>
+          <p class="section-subtitle">Strumenti progettati per eliminare le distrazioni e amplificare la tua concentrazione.</p>
+        </div>
+
+        <div class="features-grid">
+
+          <article class="feature-card feature-card--accent animate-on-scroll" aria-labelledby="feat1-title">
+            <div class="feature-icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="2"/>
+                <polyline points="16,8 16,16 22,19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="feature-title" id="feat1-title">Focus Timer Intelligente</h3>
+            <p class="feature-desc">Sessioni Pomodoro adattive che si calibrano sul tuo ritmo biologico. Pause smart, notifiche discrete e modalità flusso senza interruzioni.</p>
+            <ul class="feature-list" aria-label="Caratteristiche Focus Timer">
+              <li>Durata sessione personalizzabile</li>
+              <li>Rilevamento distrazione automatico</li>
+              <li>Modalità deep work senza limiti</li>
+            </ul>
+          </article>
+
+          <article class="feature-card animate-on-scroll" aria-labelledby="feat2-title">
+            <div class="feature-icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                <rect x="3" y="20" width="5" height="9" rx="1" stroke="currentColor" stroke-width="2"/>
+                <rect x="13" y="13" width="5" height="16" rx="1" stroke="currentColor" stroke-width="2"/>
+                <rect x="23" y="6" width="5" height="23" rx="1" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+            <h3 class="feature-title" id="feat2-title">Analytics Avanzati</h3>
+            <p class="feature-desc">Dashboard dettagliata con grafici di produttività, heat map oraria, trend settimanali e insight personalizzati per migliorare ogni giorno.</p>
+            <ul class="feature-list" aria-label="Caratteristiche Analytics">
+              <li>Heatmap ore di picco</li>
+              <li>Report settimanale automatico</li>
+              <li>Confronto con i tuoi obiettivi</li>
+            </ul>
+          </article>
+
+          <article class="feature-card animate-on-scroll" aria-labelledby="feat3-title">
+            <div class="feature-icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                <rect x="4" y="4" width="10" height="10" rx="2" stroke="currentColor" stroke-width="2"/>
+                <rect x="18" y="4" width="10" height="10" rx="2" stroke="currentColor" stroke-width="2"/>
+                <rect x="4" y="18" width="10" height="10" rx="2" stroke="currentColor" stroke-width="2"/>
+                <rect x="18" y="18" width="10" height="10" rx="2" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+            <h3 class="feature-title" id="feat3-title">Integrazioni Smart</h3>
+            <p class="feature-desc">Collega Lumino a Notion, Slack, Google Calendar e altri 40+ strumenti. Sincronizza task, blocca notifiche e registra le sessioni automaticamente.</p>
+            <ul class="feature-list" aria-label="Caratteristiche Integrazioni">
+              <li>40+ integrazioni native</li>
+              <li>Blocco notifiche automatico</li>
+              <li>Sync task da Notion / Todoist</li>
+            </ul>
+          </article>
+
+          <article class="feature-card animate-on-scroll" aria-labelledby="feat4-title">
+            <div class="feature-icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                <path d="M16 3L20 11L29 12.5L22.5 19L24.2 28L16 23.8L7.8 28L9.5 19L3 12.5L12 11Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="feature-title" id="feat4-title">Obiettivi & Streak</h3>
+            <p class="feature-desc">Imposta obiettivi giornalieri e settimanali. Mantieni la tua streak di produttività e sblocca achievement che rendono il lavoro profondo un'abitudine.</p>
+            <ul class="feature-list">
+              <li>Streak giornaliere visuali</li>
+              <li>Achievement e ricompense</li>
+              <li>Reminder intelligenti</li>
+            </ul>
+          </article>
+
+          <article class="feature-card animate-on-scroll" aria-labelledby="feat5-title">
+            <div class="feature-icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                <path d="M4 9C4 7.9 4.9 7 6 7H26C27.1 7 28 7.9 28 9V23C28 24.1 27.1 25 26 25H6C4.9 25 4 24.1 4 23V9Z" stroke="currentColor" stroke-width="2"/>
+                <path d="M4 12H28" stroke="currentColor" stroke-width="2"/>
+                <circle cx="8" cy="9.5" r="1" fill="currentColor"/>
+                <circle cx="12" cy="9.5" r="1" fill="currentColor"/>
+              </svg>
+            </div>
+            <h3 class="feature-title" id="feat5-title">Focus Sounds</h3>
+            <p class="feature-desc">Libreria di suoni ambientali scientificamente selezionati: pioggia, onde, binaural beats, rumore bianco. Crea il tuo mix perfetto per il flow.</p>
+            <ul class="feature-list">
+              <li>50+ suoni HD</li>
+              <li>Mixer personalizzabile</li>
+              <li>Binaural beats per il focus</li>
+            </ul>
+          </article>
+
+          <article class="feature-card animate-on-scroll" aria-labelledby="feat6-title">
+            <div class="feature-icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                <circle cx="16" cy="10" r="5" stroke="currentColor" stroke-width="2"/>
+                <path d="M6 28C6 22.5 10.5 18 16 18C21.5 18 26 22.5 26 28" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="feature-title" id="feat6-title">Team & Collaborazione</h3>
+            <p class="feature-desc">Condividi il tuo status di focus con il team. Sincronizza le sessioni di deep work collettivo e rispetta i momenti di concentrazione dei colleghi.</p>
+            <ul class="feature-list">
+              <li>Status focus visibile al team</li>
+              <li>Sessioni collaborative</li>
+              <li>Dashboard team manager</li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== HOW IT WORKS ========== -->
+    <section class="how-it-works section" id="how-it-works" aria-labelledby="hiw-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Come funziona</span>
+          <h2 class="section-title" id="hiw-heading">In tre passi verso la produttività profonda</h2>
+          <p class="section-subtitle">Nessuna curva di apprendimento. Sei operativo in 2 minuti.</p>
+        </div>
+
+        <div class="steps-container">
+          <div class="step animate-on-scroll" aria-labelledby="step1-title">
+            <div class="step-number" aria-hidden="true">01</div>
+            <div class="step-content">
+              <h3 class="step-title" id="step1-title">Configura il tuo profilo</h3>
+              <p class="step-desc">Dicci come lavori: le tue ore di picco, gli obiettivi giornalieri, le pause preferite. Lumino si adatta a te, non il contrario.</p>
+            </div>
+          </div>
+
+          <div class="step-connector" aria-hidden="true"></div>
+
+          <div class="step animate-on-scroll" aria-labelledby="step2-title">
+            <div class="step-number" aria-hidden="true">02</div>
+            <div class="step-content">
+              <h3 class="step-title" id="step2-title">Avvia una sessione focus</h3>
+              <p class="step-desc">Premi Start, scegli un task dalla tua lista, attiva i focus sounds. Lumino blocca le distrazioni e ti tiene nel flow fino alla fine della sessione.</p>
+            </div>
+          </div>
+
+          <div class="step-connector" aria-hidden="true"></div>
+
+          <div class="step animate-on-scroll" aria-labelledby="step3-title">
+            <div class="step-number" aria-hidden="true">03</div>
+            <div class="step-content">
+              <h3 class="step-title" id="step3-title">Analizza e migliora</h3>
+              <p class="step-desc">Ogni sessione genera dati. Il report settimanale ti mostra i tuoi pattern, i momenti di picco e le aree di miglioramento per la prossima settimana.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== TESTIMONIALS ========== -->
+    <section class="testimonials section" id="testimonials" aria-labelledby="test-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Recensioni</span>
+          <h2 class="section-title" id="test-heading">Chi usa Lumino non torna indietro</h2>
+          <p class="section-subtitle">12.000+ professionisti, freelance e team che hanno trasformato il loro modo di lavorare.</p>
+        </div>
+
+        <div class="testimonials-grid">
+
+          <blockquote class="testimonial-card animate-on-scroll" cite="Marco R.">
+            <div class="testimonial-stars" aria-label="5 stelle su 5">★★★★★</div>
+            <p class="testimonial-text">"Ho raddoppiato la mia produttività nelle prime due settimane. Le analytics mi hanno fatto capire che lavoro meglio la mattina: ora proteggo quelle ore con Lumino."</p>
+            <footer class="testimonial-author">
+              <div class="author-avatar" aria-hidden="true">MR</div>
+              <div class="author-info">
+                <cite class="author-name">Marco R.</cite>
+                <span class="author-role">Software Engineer, Milano</span>
+              </div>
+            </footer>
+          </blockquote>
+
+          <blockquote class="testimonial-card animate-on-scroll" cite="Sara L.">
+            <div class="testimonial-stars" aria-label="5 stelle su 5">★★★★★</div>
+            <p class="testimonial-text">"Finalmente un'app che non aggiunge rumore ma lo elimina. Il blocco notifiche automatico durante le sessioni è stato un game changer per me e il mio team."</p>
+            <footer class="testimonial-author">
+              <div class="author-avatar" aria-hidden="true">SL</div>
+              <div class="author-info">
+                <cite class="author-name">Sara L.</cite>
+                <span class="author-role">Product Designer, Remoto</span>
+              </div>
+            </footer>
+          </blockquote>
+
+          <blockquote class="testimonial-card animate-on-scroll" cite="Davide M.">
+            <div class="testimonial-stars" aria-label="5 stelle su 5">★★★★★</div>
+            <p class="testimonial-text">"I focus sounds con binaural beats sono incredibili. Lavoro da casa da 3 anni e non ero mai riuscito a concentrarmi così bene. Lumino Pro vale ogni centesimo."</p>
+            <footer class="testimonial-author">
+              <div class="author-avatar" aria-hidden="true">DM</div>
+              <div class="author-info">
+                <cite class="author-name">Davide M.</cite>
+                <span class="author-role">Copywriter Freelance, Torino</span>
+              </div>
+            </footer>
+          </blockquote>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== PRICING ========== -->
+    <section class="pricing section" id="pricing" aria-labelledby="pricing-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Prezzi</span>
+          <h2 class="section-title" id="pricing-heading">Semplice, trasparente, onesto</h2>
+          <p class="section-subtitle">Inizia gratis. Passa a Pro quando sei pronto. Nessuna sorpresa in fattura.</p>
+        </div>
+
+        <div class="pricing-grid">
+
+          <article class="pricing-card animate-on-scroll" aria-labelledby="plan-free-title">
+            <div class="pricing-header">
+              <h3 class="pricing-plan-name" id="plan-free-title">Free</h3>
+              <div class="pricing-price">
+                <span class="price-amount">€0</span>
+                <span class="price-period">/mese</span>
+              </div>
+              <p class="pricing-tagline">Per iniziare il viaggio</p>
+            </div>
+            <ul class="pricing-features" aria-label="Feature piano Free">
+              <li class="pricing-feature pricing-feature--included">Focus Timer base (25 min)</li>
+              <li class="pricing-feature pricing-feature--included">3 sessioni al giorno</li>
+              <li class="pricing-feature pricing-feature--included">Analytics 7 giorni</li>
+              <li class="pricing-feature pricing-feature--included">5 focus sounds</li>
+              <li class="pricing-feature pricing-feature--excluded">Integrazioni</li>
+              <li class="pricing-feature pricing-feature--excluded">Analytics avanzati</li>
+              <li class="pricing-feature pricing-feature--excluded">Team features</li>
+            </ul>
+            <a href="#contact" class="btn btn-outline pricing-cta" id="cta-free">Inizia gratis</a>
+          </article>
+
+          <article class="pricing-card pricing-card--featured animate-on-scroll" aria-labelledby="plan-pro-title">
+            <div class="pricing-badge">Più popolare</div>
+            <div class="pricing-header">
+              <h3 class="pricing-plan-name" id="plan-pro-title">Pro</h3>
+              <div class="pricing-price">
+                <span class="price-amount">€9</span>
+                <span class="price-period">/mese</span>
+              </div>
+              <p class="pricing-tagline">Per i professionisti seri</p>
+            </div>
+            <ul class="pricing-features" aria-label="Feature piano Pro">
+              <li class="pricing-feature pricing-feature--included">Focus Timer avanzato (illimitato)</li>
+              <li class="pricing-feature pricing-feature--included">Sessioni illimitate</li>
+              <li class="pricing-feature pricing-feature--included">Analytics 365 giorni</li>
+              <li class="pricing-feature pricing-feature--included">50+ focus sounds + mixer</li>
+              <li class="pricing-feature pricing-feature--included">40+ integrazioni</li>
+              <li class="pricing-feature pricing-feature--included">Report settimanali AI</li>
+              <li class="pricing-feature pricing-feature--excluded">Team features</li>
+            </ul>
+            <a href="#contact" class="btn btn-primary pricing-cta" id="cta-pro">Inizia con Pro</a>
+          </article>
+
+          <article class="pricing-card animate-on-scroll" aria-labelledby="plan-team-title">
+            <div class="pricing-header">
+              <h3 class="pricing-plan-name" id="plan-team-title">Team</h3>
+              <div class="pricing-price">
+                <span class="price-amount">€6</span>
+                <span class="price-period">/utente/mese</span>
+              </div>
+              <p class="pricing-tagline">Per team che vogliono produrre</p>
+            </div>
+            <ul class="pricing-features" aria-label="Feature piano Team">
+              <li class="pricing-feature pricing-feature--included">Tutto di Pro</li>
+              <li class="pricing-feature pricing-feature--included">Dashboard team manager</li>
+              <li class="pricing-feature pricing-feature--included">Status focus condiviso</li>
+              <li class="pricing-feature pricing-feature--included">Sessioni collaborative</li>
+              <li class="pricing-feature pricing-feature--included">Fatturazione centralizzata</li>
+              <li class="pricing-feature pricing-feature--included">Onboarding dedicato</li>
+              <li class="pricing-feature pricing-feature--included">Supporto prioritario</li>
+            </ul>
+            <a href="#contact" class="btn btn-outline pricing-cta" id="cta-team">Parla con noi</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FAQ ========== -->
+    <section class="faq section" id="faq" aria-labelledby="faq-heading">
+      <div class="container faq-container">
+        <div class="section-header">
+          <span class="section-tag">FAQ</span>
+          <h2 class="section-title" id="faq-heading">Hai una domanda? Abbiamo la risposta.</h2>
+        </div>
+
+        <div class="faq-list" role="list">
+
+          <div class="faq-item animate-on-scroll" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-1" id="faq-btn-1">
+              Posso usare Lumino su più dispositivi?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" id="faq-answer-1" role="region" aria-labelledby="faq-btn-1" hidden>
+              <p>Sì! Lumino è disponibile come app web, app desktop (Mac e Windows) e app mobile (iOS e Android). Con il piano Pro e Team, tutti i dispositivi sono sincronizzati in tempo reale.</p>
+            </div>
+          </div>
+
+          <div class="faq-item animate-on-scroll" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-2" id="faq-btn-2">
+              Come funziona il blocco delle notifiche?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" id="faq-answer-2" role="region" aria-labelledby="faq-btn-2" hidden>
+              <p>Durante una sessione focus attiva, Lumino può silenziare le notifiche di sistema (con il tuo permesso), bloccare siti distraenti tramite l'estensione browser e impostare il tuo status su "In focus" su Slack e Teams.</p>
+            </div>
+          </div>
+
+          <div class="faq-item animate-on-scroll" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-3" id="faq-btn-3">
+              I miei dati sono al sicuro?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" id="faq-answer-3" role="region" aria-labelledby="faq-btn-3" hidden>
+              <p>Assolutamente. I tuoi dati sono cifrati end-to-end, i server sono in Europa (GDPR compliant) e non vendiamo mai i dati a terze parti. Puoi esportare o eliminare tutto in qualsiasi momento.</p>
+            </div>
+          </div>
+
+          <div class="faq-item animate-on-scroll" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-4" id="faq-btn-4">
+              Posso cancellare in qualsiasi momento?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" id="faq-answer-4" role="region" aria-labelledby="faq-btn-4" hidden>
+              <p>Sì, nessun vincolo. Puoi cancellare il tuo abbonamento in qualsiasi momento dal pannello delle impostazioni. Non ci sono penali né procedure complicate. L'accesso Pro rimane attivo fino alla fine del periodo pagato.</p>
+            </div>
+          </div>
+
+          <div class="faq-item animate-on-scroll" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-5" id="faq-btn-5">
+              Il piano Free ha limiti di tempo?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" id="faq-answer-5" role="region" aria-labelledby="faq-btn-5" hidden>
+              <p>No, il piano Free è gratuito per sempre. Non è una trial. Puoi usarlo indefinitamente con le funzionalità incluse. Quando sei pronto per sbloccare tutto, il passaggio a Pro richiede un click.</p>
+            </div>
+          </div>
+
+          <div class="faq-item animate-on-scroll" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-6" id="faq-btn-6">
+              Esiste uno sconto per studenti o no-profit?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" id="faq-answer-6" role="region" aria-labelledby="faq-btn-6" hidden>
+              <p>Sì! Offriamo il 50% di sconto per studenti universitari e no-profit verificati. Scrivi a team@lumino.app con la documentazione necessaria e attiviamo lo sconto entro 24 ore.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CONTACT ========== -->
+    <section class="contact section" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="contact-wrapper">
+          <div class="contact-info">
+            <span class="section-tag">Contatti</span>
+            <h2 class="section-title" id="contact-heading">Inizia oggi il tuo percorso</h2>
+            <p class="section-subtitle">Hai domande? Vuoi parlare del piano Team? Scrivici — rispondiamo entro un'ora lavorativa.</p>
+
+            <div class="contact-perks" aria-label="Vantaggi contatto">
+              <div class="contact-perk">
+                <span class="perk-icon" aria-hidden="true">⚡</span>
+                <span>Setup in 2 minuti</span>
+              </div>
+              <div class="contact-perk">
+                <span class="perk-icon" aria-hidden="true">🔒</span>
+                <span>Nessuna carta richiesta</span>
+              </div>
+              <div class="contact-perk">
+                <span class="perk-icon" aria-hidden="true">✨</span>
+                <span>14 giorni Pro gratis</span>
+              </div>
+            </div>
+          </div>
+
+          <form class="contact-form" id="contact-form" novalidate netlify aria-label="Modulo di contatto">
+            <div class="form-group">
+              <label for="name" class="form-label">Nome <span aria-hidden="true">*</span></label>
+              <input type="text" id="name" name="name" class="form-input" placeholder="Il tuo nome" required autocomplete="name" aria-required="true" />
+              <span class="form-error" id="name-error" role="alert" aria-live="polite"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="email" class="form-label">Email <span aria-hidden="true">*</span></label>
+              <input type="email" id="email" name="email" class="form-input" placeholder="tua@email.com" required autocomplete="email" aria-required="true" />
+              <span class="form-error" id="email-error" role="alert" aria-live="polite"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="subject" class="form-label">Argomento</label>
+              <select id="subject" name="subject" class="form-input form-select">
+                <option value="">Seleziona un argomento</option>
+                <option value="trial">Attivare la trial Pro</option>
+                <option value="team">Piano Team</option>
+                <option value="support">Supporto tecnico</option>
+                <option value="partnership">Partnership</option>
+                <option value="other">Altro</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message" class="form-label">Messaggio <span aria-hidden="true">*</span></label>
+              <textarea id="message" name="message" class="form-input form-textarea" placeholder="Scrivici qui... (minimo 10 caratteri)" rows="5" required minlength="10" aria-required="true"></textarea>
+              <span class="form-error" id="message-error" role="alert" aria-live="polite"></span>
+              <span class="char-count" id="char-count" aria-live="polite">0 caratteri</span>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full" id="submit-btn">
+              <span class="btn-text">Invia messaggio</span>
+              <span class="btn-spinner" aria-hidden="true" hidden></span>
+            </button>
+
+            <div class="form-success" id="form-success" role="alert" aria-live="assertive" hidden>
+              <span>✓</span> Messaggio inviato! Ti risponderemo entro un'ora lavorativa.
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <a href="#hero" class="nav-logo" aria-label="Lumino - torna all'inizio">
+          <span class="logo-icon" aria-hidden="true">⚡</span>
+          <span class="logo-text">Lumino</span>
+        </a>
+        <p class="footer-tagline">Work deeper. Achieve more.</p>
+        <div class="footer-social" aria-label="Social media">
+          <a href="#" class="social-link" aria-label="Twitter/X di Lumino">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.402 6.231H2.742l7.738-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="LinkedIn di Lumino">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="GitHub di Lumino">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <nav class="footer-nav" aria-label="Link footer">
+        <div class="footer-col">
+          <h4 class="footer-col-title">Prodotto</h4>
+          <ul role="list">
+            <li><a href="#features">Funzionalità</a></li>
+            <li><a href="#pricing">Prezzi</a></li>
+            <li><a href="#how-it-works">Come funziona</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Azienda</h4>
+          <ul role="list">
+            <li><a href="#">Chi siamo</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press kit</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Legale</h4>
+          <ul role="list">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Termini di servizio</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+            <li><a href="#">GDPR</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>© 2026 Lumino. Tutti i diritti riservati.</p>
+        <p>Fatto con ❤️ per i lavoratori profondi</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="back-to-top" aria-label="Torna in cima alla pagina" title="Torna in cima" hidden>
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- JS -->
+  <script src="js/main.js" defer></script>
+  <script src="js/scroll.js" defer></script>
+  <script src="js/form.js" defer></script>
+
+</body>
+</html>

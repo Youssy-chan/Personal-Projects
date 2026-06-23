@@ -1,0 +1,180 @@
+/* ============================================================
+   LUMINO — animations.css
+   Keyframes + scroll animation classes
+   ============================================================ */
+
+/* ── Keyframes ─────────────────────────────────────────── */
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes orb-float {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33%       { transform: translate(40px, -30px) scale(1.05); }
+  66%       { transform: translate(-20px, 20px) scale(0.96); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-14px); }
+}
+
+@keyframes pulse-dot {
+  0%, 100% {
+    box-shadow: 0 0 6px var(--clr-success);
+    opacity: 1;
+  }
+  50% {
+    box-shadow: 0 0 14px var(--clr-success);
+    opacity: 0.7;
+  }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+@keyframes shimmer {
+  from { background-position: -200% 0; }
+  to   { background-position: 200% 0; }
+}
+
+/* ── Hero entry animations (initial) ──────────────────── */
+
+.animate-fade-in {
+  opacity: 0;
+  animation: fadeIn var(--tr-slow) ease forwards;
+}
+
+.animate-slide-up {
+  opacity: 0;
+  animation: slideUp 0.6s ease forwards;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* ── Animation delays ─────────────────────────────────── */
+.anim-delay-1 { animation-delay: 0.15s; }
+.anim-delay-2 { animation-delay: 0.3s; }
+.anim-delay-3 { animation-delay: 0.5s; }
+.anim-delay-4 { animation-delay: 0.7s; }
+
+/* ── Scroll-triggered animations ─────────────────────── */
+/* Initial state: hidden */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 0.55s ease,
+    transform 0.55s ease;
+}
+
+/* Visible state: triggered by IntersectionObserver */
+.animate-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger delay for children in grids */
+.animate-on-scroll:nth-child(1) { transition-delay: 0s; }
+.animate-on-scroll:nth-child(2) { transition-delay: 0.08s; }
+.animate-on-scroll:nth-child(3) { transition-delay: 0.16s; }
+.animate-on-scroll:nth-child(4) { transition-delay: 0.24s; }
+.animate-on-scroll:nth-child(5) { transition-delay: 0.32s; }
+.animate-on-scroll:nth-child(6) { transition-delay: 0.40s; }
+
+/* ── FAQ answer transition ────────────────────────────── */
+.faq-answer {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.35s ease;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.faq-answer.open {
+  grid-template-rows: 1fr;
+  padding-bottom: var(--space-lg);
+}
+
+.faq-answer > * {
+  overflow: hidden;
+}
+
+/* ── Navbar slide-down ────────────────────────────────── */
+.navbar {
+  animation: slideDown 0.5s ease forwards;
+}
+
+/* ── Timer progress gradient ─────────────────────────── */
+.hero-mockup svg defs {
+  /* Gradient defined inline in HTML via SVG */
+}
+
+/* ── Reduced motion ───────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .animate-on-scroll {
+    opacity: 1;
+    transform: none;
+  }
+
+  .hero-orb {
+    animation: none;
+  }
+
+  .animate-float {
+    animation: none;
+  }
+}

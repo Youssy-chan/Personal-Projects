@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<settings>
-    <category label="General">
-        <setting id="backend_url" type="text" label="Backend URL" default="http://127.0.0.1:8000" />
-        <setting id="timeout" type="slider" label="API Timeout (seconds)" default="10" range="5,1,30" option="int" />
-        <setting id="auto_fallback" type="bool" label="Auto Fallback on Error" default="true" />
-    </category>
-</settings>
