@@ -323,17 +323,20 @@ const projectsData = [
 ]
 
 export function getProjects(lang: Locale = 'it'): Project[] {
-  return projectsData.map(p => ({
-    id: p.id,
-    number: p.number,
-    category: p.category,
-    status: p.status,
-    tech: p.tech,
-    ...('demoUrl' in p ? { demoUrl: p.demoUrl } : {}),
-    ...('githubUrl' in p ? { githubUrl: p.githubUrl } : {}),
-    imageGradient: p.imageGradient,
-    ...p.translations[lang]
-  }))
+  return projectsData.map(p => {
+    const base: Project = {
+      id: p.id,
+      number: p.number,
+      category: p.category,
+      status: p.status,
+      tech: p.tech,
+      imageGradient: p.imageGradient,
+      ...p.translations[lang]
+    }
+    if ('demoUrl' in p) base.demoUrl = p.demoUrl as string
+    if ('githubUrl' in p) base.githubUrl = (p as { githubUrl?: string }).githubUrl
+    return base
+  })
 }
 
 export function getProjectById(id: string, lang: Locale = 'it'): Project | undefined {
