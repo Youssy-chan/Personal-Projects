@@ -59,7 +59,7 @@ export function AboutSection({ lang, dict }: Props) {
           {/* Right — highlights grid */}
           <div className="grid grid-cols-2 gap-4">
             {highlights.map((item, i) => (
-              <AnimatedSection key={item.label} delay={i * 0.1} direction="right">
+              <AnimatedSection key={item.title} delay={i * 0.1} direction="right">
                 <div className="glass rounded-xl p-5 hover:border-indigo-500/30 transition-all duration-300 group">
                   <div className="w-10 h-10 rounded-lg bg-indigo-500/15 border border-indigo-500/20 flex items-center justify-center mb-3 text-indigo-400 group-hover:bg-indigo-500/25 transition-all duration-300">
                     <item.icon size={20} />

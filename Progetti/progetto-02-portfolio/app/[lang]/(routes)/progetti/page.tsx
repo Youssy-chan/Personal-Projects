@@ -1,13 +1,14 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, use } from 'react'
 import { AnimatedSection } from '@/components/ui/AnimatedSection'
 import { ProjectCard } from '@/components/ui/ProjectCard'
-import { getProjects, ProjectCategory } from '@/lib/projects'
+import { getProjects } from '@/lib/projects'
 import { getDictionary, Locale } from '@/lib/dictionary'
 
-export default function ProgettiPage({ params }: { params: Promise<{ lang: Locale }> }) {
-  const { lang } = React.use(params)
+export default function ProgettiPage({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang: langParam } = use(params)
+  const lang = (langParam as Locale) ?? 'it'
   const dict = getDictionary(lang)
   const projects = getProjects(lang)
 

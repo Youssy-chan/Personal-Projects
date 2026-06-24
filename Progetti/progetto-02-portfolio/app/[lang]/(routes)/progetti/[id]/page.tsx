@@ -10,7 +10,7 @@ import { AnimatedSection } from '@/components/ui/AnimatedSection'
 import { getDictionary, Locale } from '@/lib/dictionary'
 
 interface Props {
-  params: Promise<{ lang: Locale; id: string }>
+  params: Promise<{ lang: string; id: string }>
 }
 
 export async function generateStaticParams() {
@@ -19,7 +19,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { lang, id } = await params
+  const { lang: langParam, id } = await params
+  const lang = (langParam as Locale) ?? 'it'
   const project = getProjectById(id, lang)
   if (!project) return { title: '404' }
   return {
@@ -42,7 +43,8 @@ const statusConfig: Record<string, Record<string, { label: string, class: string
 }
 
 export default async function ProjectDetailPage({ params }: Props) {
-  const { lang, id } = await params
+  const { lang: langParam, id } = await params
+  const lang = (langParam as Locale) ?? 'it'
   const project = getProjectById(id, lang)
   const dict = getDictionary(lang)
   const projects = getProjects(lang)

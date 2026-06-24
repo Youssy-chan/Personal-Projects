@@ -20,8 +20,9 @@ const socials = [
   { icon: FaLinkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/in/youssef-el-jihad-858775254', handle: 'youssef-el-jihad-858775254' },
 ]
 
-export default function ContattiPage({ params }: { params: Promise<{ lang: Locale }> }) {
-  const { lang } = use(params)
+export default function ContattiPage({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang: langParam } = use(params)
+  const lang = (langParam as Locale) ?? 'it'
   const dict = getDictionary(lang)
 
   const subjects = [

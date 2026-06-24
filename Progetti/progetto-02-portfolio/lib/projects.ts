@@ -329,8 +329,8 @@ export function getProjects(lang: Locale = 'it'): Project[] {
     category: p.category,
     status: p.status,
     tech: p.tech,
-    demoUrl: p.demoUrl,
-    githubUrl: p.githubUrl,
+    ...('demoUrl' in p ? { demoUrl: p.demoUrl } : {}),
+    ...('githubUrl' in p ? { githubUrl: p.githubUrl } : {}),
     imageGradient: p.imageGradient,
     ...p.translations[lang]
   }))

@@ -5,8 +5,9 @@ import { ProjectsPreview } from '@/components/sections/ProjectsPreview'
 import { CtaSection } from '@/components/sections/CtaSection'
 import { getDictionary, Locale } from '@/lib/dictionary'
 
-export async function generateMetadata({ params }: { params: Promise<{ lang: Locale }> }) {
-  const { lang } = await params
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang: langParam } = await params
+  const lang = (langParam as Locale) ?? 'it'
   const dict = getDictionary(lang)
   return {
     title: `Portfolio — ${dict.hero.role}`,
@@ -14,8 +15,9 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: Loc
   }
 }
 
-export default async function HomePage({ params }: { params: Promise<{ lang: Locale }> }) {
-  const { lang } = await params
+export default async function HomePage({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang: langParam } = await params
+  const lang = (langParam as Locale) ?? 'it'
   const dict = getDictionary(lang)
 
   return (

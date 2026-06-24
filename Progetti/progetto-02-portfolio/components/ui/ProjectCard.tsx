@@ -30,7 +30,7 @@ export function ProjectCard({ project, lang, dict }: ProjectCardProps) {
   return (
     <motion.div
       whileHover={{ y: -6 }}
-      transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+      transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] as const }}
       className="group relative flex flex-col rounded-xl overflow-hidden border border-white/8 bg-[#1d2022] hover:border-indigo-500/40 transition-all duration-300 hover:shadow-card-hover"
     >
       {/* Image area */}

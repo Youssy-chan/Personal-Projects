@@ -1,9 +1,11 @@
 import Link from 'next/link'
 import { SiGithub } from 'react-icons/si'
-import { FaLinkedin, FaXTwitter } from 'react-icons/fa6'
+import { FaLinkedin } from 'react-icons/fa6'
 import type { Dictionary, Locale } from '@/lib/dictionary'
 
-  { icon: FaXTwitter, href: 'https://x.com', label: 'X (Twitter)' },
+const socials = [
+  { icon: SiGithub, href: 'https://github.com/Youssy-chan/Personal-Projects', label: 'GitHub' },
+  { icon: FaLinkedin, href: 'https://www.linkedin.com/in/youssef-el-jihad-858775254', label: 'LinkedIn' },
 ]
 
 interface Props {
@@ -33,13 +35,6 @@ export function Footer({ lang, dict }: Props) {
     },
   ]
 
-const socials = [
-  { icon: SiGithub, href: 'https://github.com/Youssy-chan/Personal-Projects', label: 'GitHub' },
-  { icon: FaLinkedin, href: 'https://www.linkedin.com/in/youssef-el-jihad-858775254', label: 'LinkedIn' },
-  { icon: FaXTwitter, href: 'https://x.com', label: 'X (Twitter)' },
-]
-
-export function Footer() {
   return (
     <footer className="border-t border-white/5 bg-[#0b0f10]">
       <div className="max-w-container mx-auto px-6 py-16">
@@ -98,7 +93,7 @@ export function Footer() {
           <p className="text-[#64748b] text-sm">
             {dict.footer.builtWith}{' '}
             <span className="text-indigo-400">Next.js</span>,{' '}
-            <span className="text-violet-400">TypeScript</span> &{' '}
+            <span className="text-violet-400">TypeScript</span> &amp;{' '}
             <span className="text-indigo-400">Framer Motion</span>
           </p>
         </div>
