@@ -84,8 +84,8 @@ const projectsData = [
     id: 'blog-fullstack',
     number: '03',
     category: 'full-stack' as ProjectCategory,
-    status: 'pianificato' as ProjectStatus,
-    tech: ['Next.js', 'Prisma', 'PostgreSQL', 'NextAuth'],
+    status: 'completato' as ProjectStatus,
+    tech: ['Next.js 14', 'Prisma', 'PostgreSQL', 'Tailwind', 'NextAuth'],
     imageGradient: 'from-emerald-900/60 to-teal-900/60',
     translations: {
       it: {

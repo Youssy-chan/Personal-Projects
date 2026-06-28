@@ -1,0 +1,155 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --color-bg-primary: #0a0d12;
+  --color-bg-secondary: #111827;
+  --color-bg-card: #1a1f2e;
+  --color-accent: #6366f1;
+  --color-accent-light: #818cf8;
+  --color-accent-2: #8b5cf6;
+  --color-text-primary: #f1f5f9;
+  --color-text-secondary: #94a3b8;
+  --color-text-muted: #64748b;
+  --color-border: rgba(255, 255, 255, 0.08);
+}
+
+body {
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  font-family: var(--font-display);
+}
+
+/* Glass effect */
+.glass {
+  background: rgba(17, 24, 39, 0.6);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--color-border);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-2) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--color-bg-primary); }
+::-webkit-scrollbar-thumb { background: #334155; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #475569; }
+
+/* Prose styling for markdown */
+.prose {
+  color: var(--color-text-secondary);
+  line-height: 1.8;
+}
+.prose h2 {
+  color: var(--color-text-primary);
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+.prose h3 {
+  color: var(--color-text-primary);
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+.prose p { margin-bottom: 1.25rem; }
+.prose strong { color: var(--color-text-primary); }
+.prose a {
+  color: var(--color-accent-light);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.prose a:hover { color: var(--color-accent); }
+.prose ul, .prose ol { margin-bottom: 1.25rem; padding-left: 1.5rem; }
+.prose li { margin-bottom: 0.5rem; }
+.prose ul li::marker { color: var(--color-accent); }
+.prose ol li::marker { color: var(--color-accent); }
+.prose blockquote {
+  border-left: 3px solid var(--color-accent);
+  padding: 0.75rem 1rem;
+  margin: 1.5rem 0;
+  background: rgba(99, 102, 241, 0.05);
+  border-radius: 0 0.5rem 0.5rem 0;
+  font-style: italic;
+}
+.prose code {
+  background: rgba(99, 102, 241, 0.1);
+  color: var(--color-accent-light);
+  padding: 0.15rem 0.4rem;
+  border-radius: 0.25rem;
+  font-size: 0.875em;
+  font-family: var(--font-mono);
+}
+.prose pre {
+  background: #0d1117 !important;
+  border: 1px solid var(--color-border);
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+.prose pre code {
+  background: none;
+  color: #e6edf3;
+  padding: 0;
+  font-size: 0.875rem;
+  line-height: 1.7;
+}
+.prose img {
+  border-radius: 0.75rem;
+  border: 1px solid var(--color-border);
+}
+.prose hr {
+  border-color: var(--color-border);
+  margin: 2rem 0;
+}
+
+/* Badge styles */
+.tag-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  background: rgba(99, 102, 241, 0.1);
+  color: var(--color-accent-light);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  transition: all 0.2s;
+}
+.tag-badge:hover {
+  background: rgba(99, 102, 241, 0.2);
+  border-color: rgba(99, 102, 241, 0.4);
+}
+
+.category-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: rgba(139, 92, 246, 0.1);
+  color: #a78bfa;
+  border: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+/* Glow effects */
+.shadow-glow {
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.15);
+}
+.shadow-glow-hover:hover {
+  box-shadow: 0 0 30px rgba(99, 102, 241, 0.25);
+}
